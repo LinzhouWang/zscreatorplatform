@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = ZSCreatorPlatform.Web.WebApi
+build_property.ProjectDir = G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\ZSCreatorPlatform\ZSCreatorPlatform.Web.WebApi\
