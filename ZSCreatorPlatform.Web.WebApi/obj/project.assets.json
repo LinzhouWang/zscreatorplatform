@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "CSRedisCore/3.8.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CSRedisCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CSRedisCore.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.17": {
         "type": "package",
         "dependencies": {
@@ -165,10 +178,36 @@
             "rid": "win"
           }
         }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
       }
     }
   },
   "libraries": {
+    "CSRedisCore/3.8.3": {
+      "sha512": "1ebFg+ikVT+6Ke2WTE4gcXiwhDDoE/EYe64HaOB/3w0SPFgRrRIyx2glYe9DfihDh8ncKBS4T77TrshUkED3Jw==",
+      "type": "package",
+      "path": "csrediscore/3.8.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "csrediscore.3.8.3.nupkg.sha512",
+        "csrediscore.nuspec",
+        "lib/net40/CSRedisCore.dll",
+        "lib/net40/CSRedisCore.xml",
+        "lib/net45/CSRedisCore.dll",
+        "lib/net45/CSRedisCore.xml",
+        "lib/netstandard2.0/CSRedisCore.dll",
+        "lib/netstandard2.0/CSRedisCore.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.17": {
       "sha512": "jXMB2+jOG9JvGVCjsKvc5Bo1iSgzdbQw+Iq3BM+eIZ1inDg8rnEVUcWKpRevi9Z6F1/UnSJZ0+rhElT2/aVhhQ==",
       "type": "package",
@@ -497,10 +536,55 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CSRedisCore >= 3.8.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.17",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.17",
       "Newtonsoft.Json >= 13.0.1"
@@ -549,6 +633,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "CSRedisCore": {
+            "target": "Package",
+            "version": "[3.8.3, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.17, )"

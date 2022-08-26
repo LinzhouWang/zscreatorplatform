@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZSCreatorPlatform.Web.WebApi.Extensions;
+using ZSCreatorPlatform.Web.WebApi.Extensions.Cache;
 using ZSCreatorPlatform.Web.WebApi.Extensions.Dtos;
 
 namespace ZSCreatorPlatform.Web.WebApi
@@ -36,6 +37,18 @@ namespace ZSCreatorPlatform.Web.WebApi
             services.AddOptions();
             services.Configure<JwtConfigDto>(_configuration.GetSection("JwtConfiguration"));
 
+            #region Cache
+
+            services.AddMemoryCache();
+
+            services.AddDistributedCSRedisCache(optoins=> 
+            {
+                optoins.RedisConnectionString = _configuration.GetConnectionString("RedisConnectionString");
+            });
+
+            #endregion
+
+            #region Authentication Authorization
             var jwtConfigDto = _configuration.GetSection("JwtConfiguration").Get<JwtConfigDto>();
             //决定用哪种认证方式，以及认证信息配置，请求未授权返回，请求禁止返回，token失效原因
             services.AddAuthentication(options =>
@@ -48,7 +61,7 @@ namespace ZSCreatorPlatform.Web.WebApi
              {
                  options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                  {//3+2
-                    ValidIssuer = jwtConfigDto.Issuser,
+                     ValidIssuer = jwtConfigDto.Issuser,
                      ValidateIssuer = true,
                      ValidAudience = jwtConfigDto.Audience,
                      ValidateAudience = true,
@@ -93,7 +106,7 @@ namespace ZSCreatorPlatform.Web.WebApi
                          }
                          catch (Exception ex)//处理jwttoken传输错误读取失败
                          {
-                             context.Response.Headers.Add("token-error","token error");
+                             context.Response.Headers.Add("token-error", "token error");
                          }
 
 
@@ -101,19 +114,20 @@ namespace ZSCreatorPlatform.Web.WebApi
                      }
                  };
              })
-            .AddScheme<AuthenticationSchemeOptions,ApiResponseAuthenticationHandler>(nameof(ApiResponseAuthenticationHandler),options=> { });
+            .AddScheme<AuthenticationSchemeOptions, ApiResponseAuthenticationHandler>(nameof(ApiResponseAuthenticationHandler), options => { });
 
             //动态验证权限，使用自定义策略，但是这里只能判断出token是否正确，无法判断出到底是token过期还是token不合法
-            services.AddAuthorization(options=> 
+            services.AddAuthorization(options =>
             {
-                options.AddPolicy("default",builder=> 
-                {
-                    builder.Requirements.Add(new CAuthorizationRequirement());
-                });
+                options.AddPolicy("default", builder =>
+                 {
+                     builder.Requirements.Add(new CAuthorizationRequirement());
+                 });
             });
+            services.AddScoped<IAuthorizationHandler, CAuthorizationHandler>(); 
+            #endregion
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<IAuthorizationHandler,CAuthorizationHandler>();
 
             services.AddControllers(options=> 
             {

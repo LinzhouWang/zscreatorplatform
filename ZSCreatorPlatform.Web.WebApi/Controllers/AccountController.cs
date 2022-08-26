@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
@@ -22,11 +23,14 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
     public class AccountController : ControllerBase
     {
 
-        private JwtConfigDto _jwtConfigDto;
+        private readonly JwtConfigDto _jwtConfigDto;
 
-        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto)
+        private readonly IDistributedCache _distributedCache;
+
+        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto,IDistributedCache distributedCache)
         {
             _jwtConfigDto = jwtConfigDto.CurrentValue;
+            _distributedCache = distributedCache;
         }
 
 
@@ -52,6 +56,7 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
         {
             await Task.CompletedTask;
             var result= ResultContent.Result(200,"成功","用户信息");
+            
             return result;
         }
 
