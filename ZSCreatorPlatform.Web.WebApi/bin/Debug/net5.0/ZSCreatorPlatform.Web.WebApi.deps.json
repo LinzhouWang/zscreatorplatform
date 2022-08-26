@@ -34,7 +34,8 @@
       "ZSCreatorPlatform.Web.WebApi/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.17",
-          "Newtonsoft.Json": "11.0.2",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.17",
+          "Newtonsoft.Json": "13.0.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -340,7 +341,38 @@
           "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.AspNetCore.JsonPatch/5.0.17": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "assemblyVersion": "5.0.17.0",
+            "fileVersion": "5.0.1722.21507"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.17": {
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "5.0.17",
+          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "assemblyVersion": "5.0.17.0",
+            "fileVersion": "5.0.1722.21507"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.IdentityModel.JsonWebTokens/6.7.1": {
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "6.7.1"
@@ -398,7 +430,7 @@
       },
       "Microsoft.IdentityModel.Tokens/6.7.1": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "Microsoft.IdentityModel.Logging": "6.7.1",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
@@ -412,15 +444,29 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
           }
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.2.22727"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
       "System.IdentityModel.Tokens.Jwt/6.7.1": {
@@ -2152,12 +2198,26 @@
       "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.17",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.5.0": {
+    "Microsoft.AspNetCore.JsonPatch/5.0.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+      "sha512": "sha512-7frxJ2Jda4O1cMEP8fJmXApo1+SH1Uh338lcBzOuBOVZ9vpidfEjvUUVDq6sqxqIYqv2d80iQO+4CZBuClS52g==",
+      "path": "microsoft.aspnetcore.jsonpatch/5.0.17",
+      "hashPath": "microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E6Y7BD5pnoP/H4j4tBE7Hyi06+X7YfXKQnq2okwQfo8l4dfKL+EIxZ2ToaQ+XnXXqwwxZ7ggbyp17fJeb5uxJg==",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/5.0.17",
+      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.5.0.17.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.IdentityModel.JsonWebTokens/6.7.1": {
       "type": "package",
@@ -2194,12 +2254,19 @@
       "path": "microsoft.identitymodel.tokens/6.7.1",
       "hashPath": "microsoft.identitymodel.tokens.6.7.1.nupkg.sha512"
     },
-    "Newtonsoft.Json/11.0.2": {
+    "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json.Bson/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "path": "newtonsoft.json.bson/1.0.2",
+      "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/6.7.1": {
       "type": "package",

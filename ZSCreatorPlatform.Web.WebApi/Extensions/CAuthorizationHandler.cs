@@ -38,8 +38,8 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions
 
             //判断此次请求，是否在该用户权限集合内
 
-
-
+            context.Succeed(requirement);
+            return;
         }
 
     }

@@ -8,8 +8,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,10 +46,6 @@ namespace ZSCreatorPlatform.Web.WebApi
             })
             .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
              {
-                 //options.Events.OnChallenge = context => 
-                 //{
-                 //    context.
-                 //};
                  options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                  {//3+2
                     ValidIssuer = jwtConfigDto.Issuser,
@@ -60,6 +57,48 @@ namespace ZSCreatorPlatform.Web.WebApi
                      ClockSkew = TimeSpan.FromSeconds(0),
                      RequireExpirationTime = true,
                      ValidateLifetime = true
+                 };
+                 //options.Events.OnAuthenticationFailed = context => 
+                 //{
+                 //    context.Exception;
+                 //};
+                 options.Events = new JwtBearerEvents
+                 {
+                     OnChallenge = context =>
+                     {
+                         context.Response.Headers.Add("token-error", context.ErrorDescription);
+                         return Task.CompletedTask;
+                     },
+                     OnAuthenticationFailed = context =>
+                     {
+                         try
+                         {
+                             var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+                             var jwtToken = new JwtSecurityTokenHandler().ReadJwtToken(token);
+
+                             if (jwtToken.Issuer != jwtConfigDto.Issuser)
+                             {
+                                 context.Response.Headers.Add("token-error-issuser", "issuser is wrong");
+                             }
+
+                             if (jwtToken.Audiences.FirstOrDefault() != jwtConfigDto.Audience)
+                             {
+                                 context.Response.Headers.Add("token-error-audience", "audience is wrong");
+                             }
+
+                             if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                             {
+                                 context.Response.Headers.Add("token-expired", "token expired");
+                             }
+                         }
+                         catch (Exception ex)//处理jwttoken传输错误读取失败
+                         {
+                             context.Response.Headers.Add("token-error","token error");
+                         }
+
+
+                         return Task.CompletedTask;
+                     }
                  };
              })
             .AddScheme<AuthenticationSchemeOptions,ApiResponseAuthenticationHandler>(nameof(ApiResponseAuthenticationHandler),options=> { });
@@ -76,7 +115,20 @@ namespace ZSCreatorPlatform.Web.WebApi
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IAuthorizationHandler,CAuthorizationHandler>();
 
-            services.AddControllers();
+            services.AddControllers(options=> 
+            {
+                //实体验证
+                //options.Filters.Add<RequiredErrorForClient>();
+                //异常处理
+                //options.Filters.Add<GlobalExceptionsFilterForClient>();
+                //Swagger剔除不需要加入api展示的列表
+                //options.Conventions.Add(new ApiExplorerIgnores());
+            }).AddNewtonsoftJson(options=> 
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                options.SerializerSettings.DateFormatString = "yyyy/MM/dd HH:mm:ss";//兼容ios"yyyy-MM-dd HH:mm:ss"不支持
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
 
         }
 

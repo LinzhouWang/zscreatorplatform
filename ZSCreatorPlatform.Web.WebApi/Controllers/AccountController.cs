@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -11,6 +12,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using ZSCreatorPlatform.Web.WebApi.Extensions.Dtos;
+using ZSCreatorPlatform.Web.WebApi.Models;
 using ZSCreatorPlatform.Web.WebApi.Models.Account;
 
 namespace ZSCreatorPlatform.Web.WebApi.Controllers
@@ -29,7 +31,7 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult Login([FromBody]LoginViewModel model)
+        public ResultContent Login([FromBody]LoginViewModel model)
         {
             var claimList = new List<Claim> {new Claim("name",model.Name),new Claim("roleid","5") };
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfigDto.SigningKey));
@@ -41,15 +43,16 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
                 expires:DateTime.Now.AddMinutes(_jwtConfigDto.ExpirationTime),
                 signingCredentials:new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey,SecurityAlgorithms.HmacSha256));
             var token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
-            Console.WriteLine($"请求到的token为{token}");
-            return Content($"200,{token}");
+            return ResultContent.Result(200,"成功",token);
         }
 
 
         [Authorize("default")]
-        public IActionResult GetUserInfo()
+        public async Task<ResultContent> GetUserInfoAsync()//ResultContent<string>
         {
-            return Content($"得到用户信息方法GetUserInfo");
+            await Task.CompletedTask;
+            var result= ResultContent.Result(200,"成功","用户信息");
+            return result;
         }
 
 

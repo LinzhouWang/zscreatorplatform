@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\ZSCreatorPlatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj": {}
+    "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj": {}
   },
   "projects": {
-    "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\ZSCreatorPlatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj": {
+    "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\ZSCreatorPlatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj",
+        "projectUniqueName": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj",
         "projectName": "ZSCreatorPlatform.Web.WebApi",
-        "projectPath": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\ZSCreatorPlatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj",
+        "projectPath": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\ZSCreatorPlatform\\ZSCreatorPlatform.Web.WebApi\\obj\\",
+        "outputPath": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Web.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -47,9 +47,13 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
