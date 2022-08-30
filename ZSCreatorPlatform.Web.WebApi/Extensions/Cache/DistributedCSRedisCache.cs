@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
 {
-    public class DistributedCSRedisCache : IDistributedCache,IDisposable
+    public class DistributedCSRedisCache : IDistributedCSRedisCache
     {
 
         private readonly CSRedisClient _redisClient;
@@ -58,6 +58,7 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
             return RedisHelper.Get<byte[]>(key);
         }
 
+
         public async Task<byte[]> GetAsync(string key, CancellationToken token = default)
         {
             if (key == null)
@@ -65,6 +66,24 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
                 throw new ArgumentNullException(nameof(key));
             }
             return await RedisHelper.GetAsync<byte[]>(key);
+        }
+
+        public T Get<T>(string key)
+        {
+            if (key==null)
+            {
+                throw new ArgumentNullException(nameof(key));
+            }
+            return RedisHelper.Get<T>(key);
+        }
+
+        public async Task<T> GetAsync<T>(string key, CancellationToken token = default)
+        {
+            if (key==null)
+            {
+                throw new ArgumentNullException(nameof(key));
+            }
+            return await RedisHelper.GetAsync<T>(key);
         }
 
         public void Refresh(string key)
@@ -114,9 +133,28 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
             RedisHelper.Set(key,value);
         }
 
+        public void Set<T>(string key, T value, DistributedCacheEntryOptions options)
+        {
+            if (key==null)
+            {
+                throw new ArgumentNullException(nameof(key));
+            }    
+            RedisHelper.Set(key,value);
+        }
+
         public async Task SetAsync(string key, byte[] value, DistributedCacheEntryOptions options, CancellationToken token = default)
         {
             if (key == null)
+            {
+                throw new ArgumentNullException(nameof(key));
+            }
+            token.ThrowIfCancellationRequested();
+            await RedisHelper.SetAsync(key,value);
+        }
+
+        public async Task SetAsync<T>(string key, T value, DistributedCacheEntryOptions options, CancellationToken token = default)
+        {
+            if (key==null)
             {
                 throw new ArgumentNullException(nameof(key));
             }

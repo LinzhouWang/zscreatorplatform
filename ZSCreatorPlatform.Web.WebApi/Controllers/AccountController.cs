@@ -55,9 +55,44 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
         public async Task<ResultContent> GetUserInfoAsync()//ResultContent<string>
         {
             await Task.CompletedTask;
+
+            var test1 = new Test1 
+            {
+                Name="111",
+                Age=22,
+                Address="zz"
+            };
+
+            var testJson1 = JsonConvert.SerializeObject(test1);
+
+            var test2 = JsonConvert.DeserializeObject<Test2>(testJson1);
+
+            Console.WriteLine($"姓名:{test2.Name},年龄:{test2.Age}");
+
+            var testJson2 = JsonConvert.SerializeObject(test2);
+
+            var test11 = JsonConvert.DeserializeObject<Test1>(testJson2);
+            Console.WriteLine($"姓名：{test11.Name},年龄：{test11.Age},地址：{test11.Address}");
+
             var result= ResultContent.Result(200,"成功","用户信息");
             
             return result;
+        }
+
+        public class Test1
+        {
+            public string Name { get; set; }
+
+            public int Age { get; set; }
+
+            public string Address { get; set; }
+        }
+
+        public class Test2
+        {
+            public string Name { get; set; }
+
+            public int Age { get; set; }
         }
 
 

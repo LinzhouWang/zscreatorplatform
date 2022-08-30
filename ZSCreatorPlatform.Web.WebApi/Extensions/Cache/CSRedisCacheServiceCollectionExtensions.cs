@@ -26,9 +26,9 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
                 throw new ArgumentNullException(nameof(setupAction));
             }
 
-            //services.AddOptions();//之前谢过了，用不用再写一遍
+            services.AddOptions();//已配置过
             services.Configure(setupAction);
-            services.AddSingleton<IDistributedCache, DistributedCSRedisCache>();
+            services.AddSingleton<IDistributedCSRedisCache, DistributedCSRedisCache>();
             return services;
         }
 
