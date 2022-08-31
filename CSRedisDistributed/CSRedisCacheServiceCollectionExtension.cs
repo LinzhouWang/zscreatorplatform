@@ -1,21 +1,14 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
+namespace CSRedisDistributed
 {
-    /// <summary>
-    /// csredis extension class
-    /// </summary>
-    public static class CSRedisCacheServiceCollectionExtensions
+    public static class CSRedisCacheServiceCollectionExtension
     {
-
-        public static IServiceCollection AddDistributedCSRedisCache2(this IServiceCollection services
-            ,Action<RedisOptions> setupAction)
+        public static IServiceCollection AddDistributedCSRedisCache(this IServiceCollection services
+           , Action<RedisOptions> setupAction)
         {
             if (services == null)
             {
@@ -31,6 +24,5 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Cache
             services.AddSingleton<IDistributedCSRedisCache, DistributedCSRedisCache>();
             return services;
         }
-
     }
 }

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZSCreatorPlatform.Web.WebApi", "ZSCreatorPlatform.Web.WebApi\ZSCreatorPlatform.Web.WebApi.csproj", "{67717EA8-3C6C-4698-917D-290D04D357B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZSCreatorPlaform.Core", "ZSCreatorPlaform.Core\ZSCreatorPlaform.Core.csproj", "{2B3AEA20-CF88-40A6-94F6-91044467001D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZSCreatorPlaform.Core", "ZSCreatorPlaform.Core\ZSCreatorPlaform.Core.csproj", "{2B3AEA20-CF88-40A6-94F6-91044467001D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSRedisDistributed", "CSRedisDistributed\CSRedisDistributed.csproj", "{8347D0A8-4F4D-4EF9-89AC-FB4E6C77730A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2B3AEA20-CF88-40A6-94F6-91044467001D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B3AEA20-CF88-40A6-94F6-91044467001D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B3AEA20-CF88-40A6-94F6-91044467001D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8347D0A8-4F4D-4EF9-89AC-FB4E6C77730A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8347D0A8-4F4D-4EF9-89AC-FB4E6C77730A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8347D0A8-4F4D-4EF9-89AC-FB4E6C77730A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8347D0A8-4F4D-4EF9-89AC-FB4E6C77730A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -118,6 +118,10 @@
               "target": "Package",
               "version": "[3.8.3, )"
             },
+            "CSRedisDistributed": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.17, )"

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CSRedisDistributed</id>
+    <version>1.0.0</version>
+    <authors>wlz</authors>
+    <icon>12898.jpg</icon>
+    <description>Distributed cache based on csrediscore</description>
+    <copyright>Copyright 2022</copyright>
+    <tags>Distributed csredis cache Extension</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="CSRedisCore" version="3.8.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Abstractions" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\bin\Debug\netstandard2.0\CSRedisDistributed.dll" target="lib\netstandard2.0\CSRedisDistributed.dll" />
+    <file src="C:\Users\Administrator\Desktop\12898\12898.jpg" target="12898.jpg" />
+  </files>
+</package>

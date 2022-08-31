@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CSRedisDistributed;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
@@ -12,6 +13,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters;
+//using ZSCreatorPlatform.Web.WebApi.Extensions.Cache;
 using ZSCreatorPlatform.Web.WebApi.Extensions.Dtos;
 using ZSCreatorPlatform.Web.WebApi.Models;
 using ZSCreatorPlatform.Web.WebApi.Models.Account;
@@ -25,9 +28,9 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
 
         private readonly JwtConfigDto _jwtConfigDto;
 
-        private readonly IDistributedCache _distributedCache;
+        private readonly IDistributedCSRedisCache _distributedCache;
 
-        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto,IDistributedCache distributedCache)
+        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto, IDistributedCSRedisCache distributedCache)
         {
             _jwtConfigDto = jwtConfigDto.CurrentValue;
             _distributedCache = distributedCache;
@@ -47,52 +50,21 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
                 expires:DateTime.Now.AddMinutes(_jwtConfigDto.ExpirationTime),
                 signingCredentials:new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey,SecurityAlgorithms.HmacSha256));
             var token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+            _distributedCache.Set<string>("test",DateTime.Now.ToString(),null);
             return ResultContent.Result(200,"成功",token);
         }
 
 
         [Authorize("default")]
+        [CActionFilter]
         public async Task<ResultContent> GetUserInfoAsync()//ResultContent<string>
         {
             await Task.CompletedTask;
-
-            var test1 = new Test1 
-            {
-                Name="111",
-                Age=22,
-                Address="zz"
-            };
-
-            var testJson1 = JsonConvert.SerializeObject(test1);
-
-            var test2 = JsonConvert.DeserializeObject<Test2>(testJson1);
-
-            Console.WriteLine($"姓名:{test2.Name},年龄:{test2.Age}");
-
-            var testJson2 = JsonConvert.SerializeObject(test2);
-
-            var test11 = JsonConvert.DeserializeObject<Test1>(testJson2);
-            Console.WriteLine($"姓名：{test11.Name},年龄：{test11.Age},地址：{test11.Address}");
-
-            var result= ResultContent.Result(200,"成功","用户信息");
-            
+            var obj = new {info="用户信息",time=DateTime.Now };
+            var result= ResultContent.Result(200,"成功",obj);
+            var redisV=_distributedCache.Get<string>("test");
+            Console.WriteLine($"拿到redis中的值{redisV}");
             return result;
-        }
-
-        public class Test1
-        {
-            public string Name { get; set; }
-
-            public int Age { get; set; }
-
-            public string Address { get; set; }
-        }
-
-        public class Test2
-        {
-            public string Name { get; set; }
-
-            public int Age { get; set; }
         }
 
 

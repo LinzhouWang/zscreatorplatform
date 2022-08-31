@@ -2,7 +2,6 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\bin\Debug\net5.0\ZSCreatorPlaform.Core.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\bin\Debug\net5.0\ref\ZSCreatorPlaform.Core.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\bin\Debug\net5.0\ZSCreatorPlaform.Core.pdb
-G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.csproj.AssemblyReference.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.GeneratedMSBuildEditorConfig.editorconfig
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.AssemblyInfoInputs.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.AssemblyInfo.cs
@@ -10,3 +9,4 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ref\ZSCreatorPlaform.Core.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.pdb
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlaform.Core\obj\Debug\net5.0\ZSCreatorPlaform.Core.csproj.AssemblyReference.cache

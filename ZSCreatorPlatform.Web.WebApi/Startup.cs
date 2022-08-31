@@ -1,9 +1,11 @@
+using CSRedisDistributed;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,7 +17,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZSCreatorPlatform.Web.WebApi.Extensions;
-using ZSCreatorPlatform.Web.WebApi.Extensions.Cache;
+using ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters;
+//using ZSCreatorPlatform.Web.WebApi.Extensions.Cache;
 using ZSCreatorPlatform.Web.WebApi.Extensions.Dtos;
 
 namespace ZSCreatorPlatform.Web.WebApi
@@ -129,10 +132,16 @@ namespace ZSCreatorPlatform.Web.WebApi
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+
+            services.Configure<ApiBehaviorOptions>(options=> //关闭模型验证，默认返回
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+
             services.AddControllers(options=> 
             {
                 //实体验证
-                //options.Filters.Add<RequiredErrorForClient>();
+                options.Filters.Add<CActionFilterAttribute>();
                 //异常处理
                 //options.Filters.Add<GlobalExceptionsFilterForClient>();
                 //Swagger剔除不需要加入api展示的列表
@@ -149,6 +158,8 @@ namespace ZSCreatorPlatform.Web.WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //异常、全局日志、Hangfire
+            //mysql 多租户 聚合根 聚合内事务events 聚合间事务(cap)
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
