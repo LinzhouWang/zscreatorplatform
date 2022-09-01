@@ -20,6 +20,7 @@ using ZSCreatorPlatform.Web.WebApi.Extensions;
 using ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters;
 //using ZSCreatorPlatform.Web.WebApi.Extensions.Cache;
 using ZSCreatorPlatform.Web.WebApi.Extensions.Dtos;
+using ZSCreatorPlatform.Web.WebApi.Extensions.Exception;
 
 namespace ZSCreatorPlatform.Web.WebApi
 {
@@ -132,7 +133,6 @@ namespace ZSCreatorPlatform.Web.WebApi
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-
             services.Configure<ApiBehaviorOptions>(options=> //关闭模型验证，默认返回
             {
                 options.SuppressModelStateInvalidFilter = true;
@@ -143,7 +143,7 @@ namespace ZSCreatorPlatform.Web.WebApi
                 //实体验证
                 options.Filters.Add<CActionFilterAttribute>();
                 //异常处理
-                //options.Filters.Add<GlobalExceptionsFilterForClient>();
+                options.Filters.Add<CExceptionFilter>();
                 //Swagger剔除不需要加入api展示的列表
                 //options.Conventions.Add(new ApiExplorerIgnores());
             }).AddNewtonsoftJson(options=> 

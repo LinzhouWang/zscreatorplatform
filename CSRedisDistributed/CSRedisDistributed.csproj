@@ -10,6 +10,7 @@
     <PackageIcon>12898.jpg</PackageIcon>
     <PackageTags>Distributed csredis cache Extension </PackageTags>
     <PackageIconUrl />
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

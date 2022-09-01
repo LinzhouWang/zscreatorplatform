@@ -37,6 +37,11 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
         }
 
 
+        /// <summary>
+        /// 登录方法
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public ResultContent Login([FromBody]LoginViewModel model)
         {
@@ -60,6 +65,7 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
         public async Task<ResultContent> GetUserInfoAsync()//ResultContent<string>
         {
             await Task.CompletedTask;
+            throw new ArgumentNullException("参数不能为空");
             var obj = new {info="用户信息",time=DateTime.Now };
             var result= ResultContent.Result(200,"成功",obj);
             var redisV=_distributedCache.Get<string>("test");

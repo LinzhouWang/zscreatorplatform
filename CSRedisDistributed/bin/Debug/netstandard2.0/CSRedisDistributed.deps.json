@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "CSRedisDistributed/1.0.0": {
+      "CSRedisDistributed/1.1.0": {
         "dependencies": {
           "CSRedisCore": "3.8.3",
           "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
@@ -164,7 +164,7 @@
     }
   },
   "libraries": {
-    "CSRedisDistributed/1.0.0": {
+    "CSRedisDistributed/1.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
