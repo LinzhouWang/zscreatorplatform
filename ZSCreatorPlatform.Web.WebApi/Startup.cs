@@ -110,7 +110,7 @@ namespace ZSCreatorPlatform.Web.WebApi
                          }
                          catch (Exception ex)//处理jwttoken传输错误读取失败
                          {
-                             context.Response.Headers.Add("token-error", "token error");
+                             context.Response.Headers.Add("token-error", ex.Message);
                          }
 
 
@@ -158,7 +158,7 @@ namespace ZSCreatorPlatform.Web.WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //异常、全局日志、Hangfire
+            //异常、全局日志、Hangfire、swagger
             //mysql 多租户 聚合根 聚合内事务events 聚合间事务(cap)
             if (env.IsDevelopment())
             {

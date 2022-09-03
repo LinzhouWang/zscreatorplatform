@@ -1,0 +1,111 @@
+2022-09-03 17:38:04.1124|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:38:32.8851|0|INFO|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController|---------------------GetUserInfoAsync |url: http://localhost/api/account/getuserInfo|action: GetUserInfo|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync
+2022-09-03 17:44:40.3210|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 17:44:41.2591|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 17:44:41.2776|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:44:41.2776|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:44:41.2776|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:45:23.5247|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 17:45:24.1373|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 17:45:24.1433|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:45:24.1433|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:45:24.1433|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:45:42.8587|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/api/account/login|action: Login|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke
+2022-09-03 17:45:45.8417|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/api/account/login|action: Login|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke
+2022-09-03 17:45:47.3036|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/api/account/login|action: Login|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke
+2022-09-03 17:45:48.4610|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/api/account/login|action: Login|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke
+2022-09-03 17:46:29.6696|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 17:46:30.2307|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 17:46:30.2354|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:46:30.2354|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:46:30.2354|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:46:49.6330|0|INFO|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController|---------------------GetUserInfoAsync |url: http://localhost/api/account/getuserInfo|action: GetUserInfo|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync
+2022-09-03 17:46:49.6421|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|Value cannot be null. (Parameter '参数不能为空') |url: http://localhost/api/account/getuserInfo|action: GetUserInfo|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-09-03 17:48:15.2563|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 17:48:16.0428|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 17:48:16.0744|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:48:16.0744|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:48:16.0744|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:48:21.9281|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 17:48:22.5445|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 17:48:22.5507|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:48:22.5507|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 17:48:22.5507|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 18:12:32.7336|0|INFO|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController|---------------------GetUserInfoAsync |url: http://localhost/api/account/getuserInfo|action: GetUserInfo|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync
+2022-09-03 18:13:43.6529|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-03 18:13:44.4870|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-03 18:13:44.4981|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 18:13:44.4981|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-03 18:13:44.4981|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted

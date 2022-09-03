@@ -18,6 +18,8 @@ using ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters;
 using ZSCreatorPlatform.Web.WebApi.Extensions.Dtos;
 using ZSCreatorPlatform.Web.WebApi.Models;
 using ZSCreatorPlatform.Web.WebApi.Models.Account;
+using NLog;
+using Microsoft.Extensions.Logging;
 
 namespace ZSCreatorPlatform.Web.WebApi.Controllers
 {
@@ -30,10 +32,13 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
 
         private readonly IDistributedCSRedisCache _distributedCache;
 
-        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto, IDistributedCSRedisCache distributedCache)
+        private readonly ILogger<AccountController> _logger;
+
+        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto, IDistributedCSRedisCache distributedCache,ILogger<AccountController> logger)
         {
             _jwtConfigDto = jwtConfigDto.CurrentValue;
             _distributedCache = distributedCache;
+            _logger = logger;
         }
 
 
@@ -65,7 +70,8 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
         public async Task<ResultContent> GetUserInfoAsync()//ResultContent<string>
         {
             await Task.CompletedTask;
-            throw new ArgumentNullException("参数不能为空");
+            _logger.LogInformation($"---------------------{nameof(GetUserInfoAsync)}");
+            //throw new ArgumentNullException("参数不能为空");
             var obj = new {info="用户信息",time=DateTime.Now };
             var result= ResultContent.Result(200,"成功",obj);
             var redisV=_distributedCache.Get<string>("test");

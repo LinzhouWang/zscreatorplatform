@@ -1,0 +1,787 @@
+2022-09-03 17:38:04.1124|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 17:38:04.5467|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 17:38:04.5936|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 17:38:04.6200|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 17:38:04.6233|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 17:38:04.6432|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 17:38:04.6569|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 17:38:04.6812|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 17:38:04.7466|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:38:04.7521|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 17:38:04.7521|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:38:04.7521|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 17:38:04.7521|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 17:38:04.7655|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 17:38:04.7655|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 17:38:04.9681|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:38:04.9681|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 17:38:04.9681|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:38:04.9681|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-09-03 17:38:05.0127|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RR" accepted. 
+2022-09-03 17:38:05.0127|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RS" accepted. 
+2022-09-03 17:38:05.0138|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RR" started. 
+2022-09-03 17:38:05.0138|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RS" started. 
+2022-09-03 17:38:05.0566|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/ - - 
+2022-09-03 17:38:05.0669|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-09-03 17:38:05.0669|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:38:05.0669|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-09-03 17:38:05.0669|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /login.html was not modified 
+2022-09-03 17:38:05.0802|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /login.html 
+2022-09-03 17:38:05.0802|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RR" completed keep alive response. 
+2022-09-03 17:38:05.0802|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/ - - - 304 - text/html 34.3180ms 
+2022-09-03 17:38:05.1311|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - 
+2022-09-03 17:38:05.1311|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RR" completed keep alive response. 
+2022-09-03 17:38:05.1311|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 3073 application/javascript;+charset=utf-8 2.0934ms 
+2022-09-03 17:38:11.4309|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RS" received FIN. 
+2022-09-03 17:38:11.4309|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RR" received FIN. 
+2022-09-03 17:38:11.4309|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RR" disconnecting. 
+2022-09-03 17:38:11.4309|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RS" sending FIN because: "The client closed the connection." 
+2022-09-03 17:38:11.4309|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RR" sending FIN because: "The client closed the connection." 
+2022-09-03 17:38:11.4371|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RS" disconnecting. 
+2022-09-03 17:38:11.4371|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RS" stopped. 
+2022-09-03 17:38:11.4371|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RR" stopped. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RT" accepted. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU" accepted. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RT" started. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RT" received FIN. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU" started. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RT" disconnecting. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RT" stopped. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RT" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-09-03 17:38:18.2831|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 17:38:18.2831|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:38:18.2831|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 17:38:18.3398|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 17:38:18.3431|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 17:38:18.3431|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:38:18.5888|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 17:38:18.5927|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:38:18.5927|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-09-03 17:38:18.7741|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature ZSCreatorPlatform.Web.WebApi.Models.ResultContent Login(ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel) on controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi). 
+2022-09-03 17:38:18.7741|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-09-03 17:38:18.7741|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-09-03 17:38:18.7741|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:38:18.7741|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter 
+2022-09-03 17:38:18.7741|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:38:18.7741|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:38:18.9624|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:38:18.9707|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' ... 
+2022-09-03 17:38:18.9707|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' using the name '' in request data ... 
+2022-09-03 17:38:18.9707|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2022-09-03 17:38:18.9707|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2022-09-03 17:38:18.9939|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU", Request id "0HMKDI008G9RU:00000002": started reading request body. 
+2022-09-03 17:38:18.9939|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU", Request id "0HMKDI008G9RU:00000002": done reading request body. 
+2022-09-03 17:38:19.2175|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 17:38:19.2175|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 17:38:19.2175|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' ... 
+2022-09-03 17:38:19.2175|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 17:38:19.2322|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:19.2322|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:19.2322|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:19.2322|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) - Validation state: Valid 
+2022-09-03 17:38:19.2322|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) with arguments (ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel) 
+2022-09-03 17:38:19.4373|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 196.3329ms. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:19.4373|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 17:38:19.4373|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2022-09-03 17:38:19.4373|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-09-03 17:38:19.4373|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-09-03 17:38:19.4373|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-09-03 17:38:19.4373|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-09-03 17:38:19.4373|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ZSCreatorPlatform.Web.WebApi.Models.ResultContent'. 
+2022-09-03 17:38:19.4954|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 17:38:19.4954|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:19.4954|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:19.4954|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:19.5053|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) in 720.6286ms 
+2022-09-03 17:38:19.5053|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:38:19.5053|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU" completed keep alive response. 
+2022-09-03 17:38:19.5053|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 200 248 application/json;+charset=utf-8 1216.8245ms 
+2022-09-03 17:38:32.3893|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/api/account/getuserInfo - - 
+2022-09-03 17:38:32.3893|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:38:32.3893|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /api/account/getuserInfo does not match a supported file type 
+2022-09-03 17:38:32.4090|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/getuserInfo' 
+2022-09-03 17:38:32.4090|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/GetUserInfo' is valid for the request path '/api/account/getuserInfo' 
+2022-09-03 17:38:32.4090|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:38:32.8600|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2022-09-03 17:38:32.8600|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2022-09-03 17:38:32.8600|0|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2022-09-03 17:38:32.8600|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:38:32.8851|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetUserInfo", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ZSCreatorPlatform.Web.WebApi.Models.ResultContent] GetUserInfoAsync() on controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi). 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:38:32.8851|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:38:32.8851|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:32.8851|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:32.8851|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:32.8851|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:32.8851|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi) - Validation state: Valid 
+2022-09-03 17:38:32.8851|0|INFO|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController|---------------------GetUserInfoAsync 
+2022-09-03 17:38:32.9154|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:32.9154|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:38:32.9154|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:32.9154|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:38:32.9154|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Exception Filter: Before executing OnException on filter ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter. 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Exception Filter: After executing OnException on filter ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter. 
+2022-09-03 17:38:32.9244|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at exception filter 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ContentResult. 
+2022-09-03 17:38:32.9244|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor|Executing ContentResult with HTTP Response ContentType of application/json 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ContentResult. 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:32.9244|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:38:32.9244|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi) in 42.1906ms 
+2022-09-03 17:38:32.9244|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:38:32.9244|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU" completed keep alive response. 
+2022-09-03 17:38:32.9244|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/api/account/getuserInfo - - - 500 61 application/json 538.5126ms 
+2022-09-03 17:40:33.1416|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU" disconnecting. 
+2022-09-03 17:40:33.1416|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI008G9RU" stopped. 
+2022-09-03 17:40:33.1416|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI008G9RU" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-09-03 17:44:40.3210|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 17:44:40.8064|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 17:44:40.8534|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 17:44:40.8797|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 17:44:40.8888|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 17:44:40.8888|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 17:44:40.8888|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 17:44:40.8888|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 17:44:40.9044|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 17:44:40.9876|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:44:40.9876|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 17:44:40.9876|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:44:40.9876|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 17:44:41.0012|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 17:44:41.0012|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 17:44:41.0012|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 17:44:41.2591|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 17:44:41.2776|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:44:41.2776|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 17:44:41.2776|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 17:44:41.2776|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 17:44:41.2776|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:44:41.2776|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-09-03 17:44:41.3237|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI3MC0OIK" accepted. 
+2022-09-03 17:44:41.3237|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI3MC0OIL" accepted. 
+2022-09-03 17:44:41.3237|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI3MC0OIK" started. 
+2022-09-03 17:44:41.3237|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI3MC0OIL" started. 
+2022-09-03 17:45:23.5247|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 17:45:23.8362|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 17:45:23.8822|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 17:45:23.9050|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 17:45:23.9284|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 17:45:23.9390|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 17:45:23.9509|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 17:45:23.9847|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:45:23.9847|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 17:45:23.9847|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:45:23.9847|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 17:45:23.9847|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 17:45:23.9994|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 17:45:23.9994|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 17:45:24.1373|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 17:45:24.1433|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:45:24.1433|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 17:45:24.1433|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 17:45:24.1433|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 17:45:24.1433|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:45:24.1433|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-09-03 17:45:42.5907|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI48KBD41" received FIN. 
+2022-09-03 17:45:42.6030|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD41" accepted. 
+2022-09-03 17:45:42.6030|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD41" started. 
+2022-09-03 17:45:42.6030|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42" accepted. 
+2022-09-03 17:45:42.6169|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI48KBD41" sending FIN because: "The client closed the connection." 
+2022-09-03 17:45:42.6169|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD41" disconnecting. 
+2022-09-03 17:45:42.6169|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD41" stopped. 
+2022-09-03 17:45:42.6243|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42" started. 
+2022-09-03 17:45:42.6724|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 17:45:42.6724|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-09-03 17:45:42.6724|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:45:42.6860|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 17:45:42.7314|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 17:45:42.7345|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 17:45:42.7345|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:42.8189|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 17:45:42.8189|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:42.8304|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-09-03 17:45:42.8587|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:42.8587|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 17:45:42.9251|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42" completed keep alive response. 
+2022-09-03 17:45:42.9251|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 500 - text/plain 255.7646ms 
+2022-09-03 17:45:42.9251|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000002": started reading request body. 
+2022-09-03 17:45:42.9251|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000002": done reading request body. 
+2022-09-03 17:45:45.8298|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 17:45:45.8298|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:45:45.8298|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 17:45:45.8298|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 17:45:45.8298|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 17:45:45.8298|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:45.8298|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 17:45:45.8298|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:45.8298|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:45.8417|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 17:45:45.8417|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42" completed keep alive response. 
+2022-09-03 17:45:45.8417|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 500 - text/plain 15.7197ms 
+2022-09-03 17:45:45.8417|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000003": started reading request body. 
+2022-09-03 17:45:45.8417|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000003": done reading request body. 
+2022-09-03 17:45:47.2772|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 17:45:47.2772|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:45:47.2772|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 17:45:47.2772|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 17:45:47.2772|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 17:45:47.2772|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:47.2862|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 17:45:47.2862|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:47.3036|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:47.3036|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 17:45:47.3112|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42" completed keep alive response. 
+2022-09-03 17:45:47.3112|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 500 - text/plain 34.1048ms 
+2022-09-03 17:45:47.3112|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000004": started reading request body. 
+2022-09-03 17:45:47.3112|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000004": done reading request body. 
+2022-09-03 17:45:48.4610|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 17:45:48.4610|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 17:45:48.4610|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:48.4610|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:45:48.4610|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42" completed keep alive response. 
+2022-09-03 17:45:48.4610|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 500 - text/plain 4.6273ms 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000005": started reading request body. 
+2022-09-03 17:45:48.4610|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI48KBD42", Request id "0HMKDI48KBD42:00000005": done reading request body. 
+2022-09-03 17:46:29.6696|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 17:46:29.9520|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 17:46:29.9926|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 17:46:30.0147|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 17:46:30.0319|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 17:46:30.0769|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:46:30.0769|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 17:46:30.0769|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:46:30.0769|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 17:46:30.0769|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 17:46:30.0921|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 17:46:30.0921|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 17:46:30.2307|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 17:46:30.2354|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:46:30.2354|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 17:46:30.2354|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 17:46:30.2354|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 17:46:30.2354|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:46:30.2354|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-09-03 17:46:33.3622|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI4NOHLI4" received FIN. 
+2022-09-03 17:46:33.3762|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI4" accepted. 
+2022-09-03 17:46:33.3762|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI5" accepted. 
+2022-09-03 17:46:33.3762|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI4" started. 
+2022-09-03 17:46:33.3762|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI5" started. 
+2022-09-03 17:46:33.3966|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI4NOHLI4" sending FIN because: "The client closed the connection." 
+2022-09-03 17:46:33.3966|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI4" disconnecting. 
+2022-09-03 17:46:33.3966|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI4" stopped. 
+2022-09-03 17:46:33.4469|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 17:46:33.4587|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-09-03 17:46:33.4587|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:46:33.4587|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 17:46:33.5419|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 17:46:33.5451|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 17:46:33.5451|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:46:33.6198|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 17:46:33.6248|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:46:33.6248|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-09-03 17:46:33.6939|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature ZSCreatorPlatform.Web.WebApi.Models.ResultContent Login(ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel) on controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi). 
+2022-09-03 17:46:33.6939|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-09-03 17:46:33.6939|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-09-03 17:46:33.6939|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:46:33.6939|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter 
+2022-09-03 17:46:33.6939|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:46:33.6939|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:46:33.8043|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:46:33.8146|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' ... 
+2022-09-03 17:46:33.8146|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' using the name '' in request data ... 
+2022-09-03 17:46:33.8146|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2022-09-03 17:46:33.8146|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2022-09-03 17:46:33.8260|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI5", Request id "0HMKDI4NOHLI5:00000002": started reading request body. 
+2022-09-03 17:46:33.8260|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI5", Request id "0HMKDI4NOHLI5:00000002": done reading request body. 
+2022-09-03 17:46:34.0024|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 17:46:34.0024|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 17:46:34.0024|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' ... 
+2022-09-03 17:46:34.0024|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 17:46:34.0131|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:34.0131|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:34.0131|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:34.0131|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) - Validation state: Valid 
+2022-09-03 17:46:34.0131|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) with arguments (ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel) 
+2022-09-03 17:46:34.2049|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 180.2606ms. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:34.2049|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 17:46:34.2049|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2022-09-03 17:46:34.2049|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-09-03 17:46:34.2049|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-09-03 17:46:34.2049|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-09-03 17:46:34.2049|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-09-03 17:46:34.2049|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ZSCreatorPlatform.Web.WebApi.Models.ResultContent'. 
+2022-09-03 17:46:34.2616|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 17:46:34.2616|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:34.2616|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:34.2616|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:34.2701|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) in 566.4902ms 
+2022-09-03 17:46:34.2701|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:46:34.2701|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI5" completed keep alive response. 
+2022-09-03 17:46:34.2701|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 200 248 application/json;+charset=utf-8 827.1609ms 
+2022-09-03 17:46:49.4042|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/api/account/getuserInfo - - 
+2022-09-03 17:46:49.4042|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 17:46:49.4042|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /api/account/getuserInfo does not match a supported file type 
+2022-09-03 17:46:49.4042|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/getuserInfo' 
+2022-09-03 17:46:49.4042|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/GetUserInfo' is valid for the request path '/api/account/getuserInfo' 
+2022-09-03 17:46:49.4042|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:46:49.5521|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2022-09-03 17:46:49.5521|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2022-09-03 17:46:49.5599|0|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2022-09-03 17:46:49.5599|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:46:49.6330|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetUserInfo", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ZSCreatorPlatform.Web.WebApi.Models.ResultContent] GetUserInfoAsync() on controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi). 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:46:49.6330|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 17:46:49.6330|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:49.6330|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:49.6330|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:49.6330|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:49.6330|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi) - Validation state: Valid 
+2022-09-03 17:46:49.6330|0|INFO|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController|---------------------GetUserInfoAsync 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Exception Filter: Before executing OnException on filter ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter. 
+2022-09-03 17:46:49.6421|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|Value cannot be null. (Parameter '参数不能为空') 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Exception Filter: After executing OnException on filter ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter. 
+2022-09-03 17:46:49.6421|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at exception filter 'ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter'. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ContentResult. 
+2022-09-03 17:46:49.6421|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor|Executing ContentResult with HTTP Response ContentType of application/json 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ContentResult. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:49.6421|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Always Run Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 17:46:49.6421|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi) in 19.8405ms 
+2022-09-03 17:46:49.6421|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 17:46:49.6421|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI4NOHLI5" completed keep alive response. 
+2022-09-03 17:46:49.6421|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/api/account/getuserInfo - - - 500 61 application/json 249.1143ms 
+2022-09-03 17:48:15.2563|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 17:48:15.6118|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 17:48:15.6499|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 17:48:15.6698|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 17:48:15.6721|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 17:48:15.6870|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 17:48:15.7285|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:48:15.7285|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 17:48:15.7336|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:48:15.7336|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 17:48:15.7336|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 17:48:15.7336|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 17:48:15.7336|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 17:48:16.0428|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 17:48:16.0744|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:48:16.0744|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 17:48:16.0744|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 17:48:16.0744|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 17:48:16.0744|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:48:16.0744|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-09-03 17:48:21.9281|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 17:48:22.2546|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 17:48:22.2958|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 17:48:22.3182|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 17:48:22.3303|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 17:48:22.3493|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 17:48:22.3873|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:48:22.3904|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 17:48:22.3904|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 17:48:22.3904|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 17:48:22.3904|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 17:48:22.4040|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 17:48:22.4040|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 17:48:22.5445|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 17:48:22.5507|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:48:22.5507|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 17:48:22.5507|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 17:48:22.5507|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 17:48:22.5507|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 17:48:22.5507|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-09-03 17:54:31.1721|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7U" accepted. 
+2022-09-03 17:54:31.1721|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7V" accepted. 
+2022-09-03 17:54:31.5814|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7U" started. 
+2022-09-03 17:54:31.5814|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7V" started. 
+2022-09-03 17:54:31.8083|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P7U" received FIN. 
+2022-09-03 17:54:31.8223|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P7V" received FIN. 
+2022-09-03 17:54:31.8285|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P7V" sending FIN because: "The client closed the connection." 
+2022-09-03 17:54:31.8285|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7U" disconnecting. 
+2022-09-03 17:54:31.8285|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7V" disconnecting. 
+2022-09-03 17:54:31.8285|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P7U" sending FIN because: "The client closed the connection." 
+2022-09-03 17:54:31.8285|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7V" stopped. 
+2022-09-03 17:54:31.8461|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P7U" stopped. 
+2022-09-03 17:54:33.2692|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P80" accepted. 
+2022-09-03 17:54:33.2845|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P80" started. 
+2022-09-03 17:54:33.4209|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - 
+2022-09-03 17:54:33.4519|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P80" completed keep alive response. 
+2022-09-03 17:54:33.4519|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 3073 application/javascript;+charset=utf-8 43.5360ms 
+2022-09-03 17:54:36.8372|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P80" received FIN. 
+2022-09-03 17:54:36.8372|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P80" disconnecting. 
+2022-09-03 17:54:36.8372|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P80" stopped. 
+2022-09-03 17:54:36.8372|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P80" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-09-03 18:12:16.6419|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P81" accepted. 
+2022-09-03 18:12:16.6419|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P82" accepted. 
+2022-09-03 18:12:16.7467|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P81" started. 
+2022-09-03 18:12:16.7467|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P82" started. 
+2022-09-03 18:12:16.7467|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P81" received FIN. 
+2022-09-03 18:12:16.7467|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P81" disconnecting. 
+2022-09-03 18:12:16.7467|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P81" stopped. 
+2022-09-03 18:12:16.7494|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 
+2022-09-03 18:12:16.7815|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKDI9657P81" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-09-03 18:12:16.8364|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-09-03 18:12:16.8364|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 18:12:16.8364|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2022-09-03 18:12:16.8954|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/login' 
+2022-09-03 18:12:16.8954|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/Login' is valid for the request path '/api/account/login' 
+2022-09-03 18:12:16.8954|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 18:12:17.0566|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2022-09-03 18:12:17.0607|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 18:12:17.0607|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-09-03 18:12:17.1681|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature ZSCreatorPlatform.Web.WebApi.Models.ResultContent Login(ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel) on controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi). 
+2022-09-03 18:12:17.1681|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-09-03 18:12:17.1681|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-09-03 18:12:17.1681|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 18:12:17.1681|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter 
+2022-09-03 18:12:17.1681|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 18:12:17.1708|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 18:12:17.3605|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 18:12:17.3726|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' ... 
+2022-09-03 18:12:17.3726|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' using the name '' in request data ... 
+2022-09-03 18:12:17.3726|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2022-09-03 18:12:17.3726|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2022-09-03 18:12:17.4260|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P82", Request id "0HMKDI9657P82:00000002": started reading request body. 
+2022-09-03 18:12:17.4260|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P82", Request id "0HMKDI9657P82:00000002": done reading request body. 
+2022-09-03 18:12:17.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 18:12:17.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 18:12:17.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel' ... 
+2022-09-03 18:12:17.7350|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'model' of type 'ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel'. 
+2022-09-03 18:12:17.7350|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:17.7350|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:17.7350|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:17.7350|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) - Validation state: Valid 
+2022-09-03 18:12:17.7350|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) with arguments (ZSCreatorPlatform.Web.WebApi.Models.Account.LoginViewModel) 
+2022-09-03 18:12:17.9810|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 229.6741ms. 
+2022-09-03 18:12:17.9810|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:17.9810|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:17.9810|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:17.9810|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:17.9810|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:17.9810|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:17.9834|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 18:12:17.9834|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2022-09-03 18:12:17.9834|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-09-03 18:12:17.9834|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-09-03 18:12:17.9834|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-09-03 18:12:17.9834|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-09-03 18:12:17.9834|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ZSCreatorPlatform.Web.WebApi.Models.ResultContent'. 
+2022-09-03 18:12:18.0458|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 18:12:18.0458|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:18.0458|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:18.0458|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:18.0458|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi) in 876.9245ms 
+2022-09-03 18:12:18.0458|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.Login (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 18:12:18.0458|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P82" completed keep alive response. 
+2022-09-03 18:12:18.0458|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5000/api/account/login application/json 51 - 200 248 application/json;+charset=utf-8 1305.9582ms 
+2022-09-03 18:12:32.5777|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/api/account/getuserInfo - - 
+2022-09-03 18:12:32.5777|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-09-03 18:12:32.5777|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /api/account/getuserInfo does not match a supported file type 
+2022-09-03 18:12:32.5777|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/account/getuserInfo' 
+2022-09-03 18:12:32.5777|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' with route pattern 'api/Account/GetUserInfo' is valid for the request path '/api/account/getuserInfo' 
+2022-09-03 18:12:32.5777|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 18:12:32.6988|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2022-09-03 18:12:32.7019|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2022-09-03 18:12:32.7019|0|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2022-09-03 18:12:32.7019|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 18:12:32.7336|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetUserInfo", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ZSCreatorPlatform.Web.WebApi.Models.ResultContent] GetUserInfoAsync() on controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi). 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0), ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute (Order: 0) 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 18:12:32.7336|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller ZSCreatorPlatform.Web.WebApi.Controllers.AccountController (ZSCreatorPlatform.Web.WebApi) 
+2022-09-03 18:12:32.7336|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:32.7336|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:32.7336|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7336|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7336|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi) - Validation state: Valid 
+2022-09-03 18:12:32.7336|0|INFO|ZSCreatorPlatform.Web.WebApi.Controllers.AccountController|---------------------GetUserInfoAsync 
+2022-09-03 18:12:32.7570|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 22.2483ms. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7570|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 18:12:32.7570|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2022-09-03 18:12:32.7570|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-09-03 18:12:32.7570|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-09-03 18:12:32.7570|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-09-03 18:12:32.7570|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-09-03 18:12:32.7570|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ZSCreatorPlatform.Web.WebApi.Models.ResultContent'. 
+2022-09-03 18:12:32.7836|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2022-09-03 18:12:32.7836|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7836|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecutionAsync on filter ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters.CActionFilterAttribute. 
+2022-09-03 18:12:32.7836|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:32.7836|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-09-03 18:12:32.7836|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi) in 49.6368ms 
+2022-09-03 18:12:32.7836|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi)' 
+2022-09-03 18:12:32.7836|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKDI9657P82" completed keep alive response. 
+2022-09-03 18:12:32.7836|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/api/account/getuserInfo - - - 200 87 application/json;+charset=utf-8 206.5511ms 
+2022-09-03 18:13:43.6529|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main 
+2022-09-03 18:13:44.1346|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-09-03 18:13:44.1855|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-09-03 18:13:44.2113|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2.xml'. 
+2022-09-03 18:13:44.2113|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-43f6641a-43d4-467a-afa1-0c5aeabdd8ed.xml'. 
+2022-09-03 18:13:44.2113|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-573a8a27-a37e-431b-9396-5a0bec0d1310.xml'. 
+2022-09-03 18:13:44.2113|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-793fcf90-53cb-46e8-b010-144c4694a6ff.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-8a2a6113-38ac-46d7-92d2-715060be68af.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-920893c1-c308-47a3-a579-2b16e34b646f.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd0f812-a8e7-44fa-abb0-6748176dd345.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-a5907b6a-ce3c-459c-8c8b-350b770cab1a.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-c08d1c02-7f31-4417-abf9-affad574ff2d.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-dc44b4aa-f699-4be7-8a66-de6c5fd21f6f.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-de20637e-8588-4007-9d37-ebc87738ff91.xml'. 
+2022-09-03 18:13:44.2166|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3e7b4bb2-9151-4c1d-bb17-0d4494d6bde2}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {43f6641a-43d4-467a-afa1-0c5aeabdd8ed}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {573a8a27-a37e-431b-9396-5a0bec0d1310}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {793fcf90-53cb-46e8-b010-144c4694a6ff}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8a2a6113-38ac-46d7-92d2-715060be68af}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {920893c1-c308-47a3-a579-2b16e34b646f}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd0f812-a8e7-44fa-abb0-6748176dd345}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {a5907b6a-ce3c-459c-8c8b-350b770cab1a}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c08d1c02-7f31-4417-abf9-affad574ff2d}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {de20637e-8588-4007-9d37-ebc87738ff91}. 
+2022-09-03 18:13:44.2346|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} with expiration date 2022-10-23 08:39:54Z as default key. 
+2022-09-03 18:13:44.2820|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 18:13:44.2820|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-09-03 18:13:44.2820|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-09-03 18:13:44.2820|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-09-03 18:13:44.2820|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-09-03 18:13:44.2999|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} as the default key. 
+2022-09-03 18:13:44.2999|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {dc44b4aa-f699-4be7-8a66-de6c5fd21f6f} was loaded during application startup. 
+2022-09-03 18:13:44.4870|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-09-03 18:13:44.4870|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly ZSCreatorPlatform.Web.WebApi 
+2022-09-03 18:13:44.4981|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2022-09-03 18:13:44.4981|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-09-03 18:13:44.4981|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-09-03 18:13:44.4981|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi 
+2022-09-03 18:13:44.4981|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 

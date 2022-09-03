@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using NLog;
 using System;
@@ -15,14 +16,12 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Exception
     public class CExceptionFilter : IExceptionFilter
     {
 
-        //private readonly ILogger _logger;
+        private readonly ILogger<CExceptionFilter> _logger;
 
-        //public CExceptionFilter(ILogger logger)
-        //{
-        //    _logger = logger;
-        //}
-
-        public CExceptionFilter() { }
+        public CExceptionFilter(ILogger<CExceptionFilter> logger)
+        {
+            _logger = logger;
+        }
 
         public void OnException(ExceptionContext context)
         {
@@ -31,6 +30,8 @@ namespace ZSCreatorPlatform.Web.WebApi.Extensions.Exception
                 //日记记录具体错误信息
                 Console.WriteLine($"---{nameof(CExceptionFilter)}---");
                 Console.WriteLine($"{context.Exception.Message}");
+
+                _logger.LogError(context.Exception.Message);
 
                 context.ExceptionHandled = true;
                 context.Result = new ContentResult
