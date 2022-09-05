@@ -138,6 +138,18 @@ namespace ZSCreatorPlatform.Web.WebApi
                 options.SuppressModelStateInvalidFilter = true;
             });
 
+            //swaggergen
+            //services.AddSwaggerGen(options=> 
+            //{
+            //    options.SwaggerDoc("v1.0.0",new Microsoft.OpenApi.Models.OpenApiInfo 
+            //    {
+            //        Title="ZSCreatorPlatformTitle",
+            //        Version="v1"
+            //    });
+            //});
+            services.AddSwaggerGen();
+
+
             services.AddControllers(options=> 
             {
                 //实体验证
@@ -173,6 +185,15 @@ namespace ZSCreatorPlatform.Web.WebApi
 
             app.UseRouting();
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI();
+
+            //app.UseSwaggerUI(options =>
+            //{
+            //    options.SwaggerEndpoint("v1/swagger.json", "ZSCreatorPlatformApiV1");
+            //});
+
             app.UseAuthentication();
 
             app.UseAuthorization();
@@ -186,6 +207,8 @@ namespace ZSCreatorPlatform.Web.WebApi
                 endpoints.MapControllerRoute(
                     name:"default",
                     pattern:"{controller=Home}/{action=Index}/{id?}");
+
+                //endpoints.MapSwagger();
             });
         }
     }

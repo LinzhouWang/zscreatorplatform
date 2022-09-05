@@ -66,6 +66,7 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
 
 
         [Authorize("default")]
+        [HttpGet]
         [CActionFilter]
         public async Task<ResultContent> GetUserInfoAsync()//ResultContent<string>
         {

@@ -1,0 +1,69 @@
+2022-09-05 16:49:03.6329|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 16:49:05.2820|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 16:49:05.2820|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 16:49:05.2820|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 16:49:05.2820|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 16:49:46.4377|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 16:49:47.6965|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 16:49:47.7424|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 16:49:47.7424|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 16:49:47.7424|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 16:50:31.0772|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStopping
+2022-09-05 17:04:31.2046|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:04:32.2469|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:04:32.2535|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:04:32.2535|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:04:32.2535|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:23:35.7415|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:23:36.7035|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:23:36.7035|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:23:36.7035|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:23:36.7035|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:23:59.9992|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:24:02.5432|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:24:02.5677|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:02.5677|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:02.5677|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:23.6650|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:24:24.6587|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:24:24.6818|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:24.6818|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:24.6818|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:37.6040|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:24:38.3570|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:24:38.3570|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:38.3570|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:38.3570|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:24:57.7863|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStopping
+2022-09-05 17:25:18.7626|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:25:19.5740|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:25:19.5810|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:25:19.5810|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:25:19.5810|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:26:40.6177|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ZSCreatorPlatform.Web.WebApi.Controllers.AccountController.GetUserInfoAsync (ZSCreatorPlatform.Web.WebApi). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: http://localhost/swagger/v1/swagger.json|action: |Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke
+2022-09-05 17:27:48.9353|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:27:49.1892|0|ERROR|ZSCreatorPlatform.Web.WebApi.Program|Stopped program because of exception System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at ZSCreatorPlatform.Web.WebApi.Program.Main(String[] args) in G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\Program.cs:line 23|url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:28:57.7254|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:28:58.5451|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:28:58.5451|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:28:58.5451|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:28:58.5451|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:42:02.0776|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:42:02.7753|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:42:02.7802|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:42:02.7802|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:42:02.7802|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:42:58.8384|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-09-05 17:42:59.5596|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2022-09-05 17:42:59.5665|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:42:59.5665|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-09-05 17:42:59.5665|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
