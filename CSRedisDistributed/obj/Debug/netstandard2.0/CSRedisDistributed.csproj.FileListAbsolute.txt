@@ -1,10 +1,10 @@
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\bin\Debug\netstandard2.0\CSRedisDistributed.deps.json
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\bin\Debug\netstandard2.0\CSRedisDistributed.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\bin\Debug\netstandard2.0\CSRedisDistributed.pdb
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.csproj.AssemblyReference.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.GeneratedMSBuildEditorConfig.editorconfig
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.AssemblyInfoInputs.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.AssemblyInfo.cs
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.csproj.CoreCompileInputs.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.pdb
-G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\CSRedisDistributed\obj\Debug\netstandard2.0\CSRedisDistributed.csproj.AssemblyReference.cache

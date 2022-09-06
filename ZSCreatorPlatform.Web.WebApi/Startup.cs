@@ -175,6 +175,9 @@ namespace ZSCreatorPlatform.Web.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             var defaultFilesOptions = new DefaultFilesOptions();
@@ -184,15 +187,6 @@ namespace ZSCreatorPlatform.Web.WebApi
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseSwagger();
-
-            app.UseSwaggerUI();
-
-            //app.UseSwaggerUI(options =>
-            //{
-            //    options.SwaggerEndpoint("v1/swagger.json", "ZSCreatorPlatformApiV1");
-            //});
 
             app.UseAuthentication();
 
