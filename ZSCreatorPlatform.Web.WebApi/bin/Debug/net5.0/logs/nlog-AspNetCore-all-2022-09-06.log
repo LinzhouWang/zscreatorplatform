@@ -623,3 +623,6 @@
 2022-09-06 17:16:12.1800|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMKFQ62LN4K2" stopped. 
 2022-09-06 17:16:12.1800|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKFQ62LN4K1" sending FIN because: "The Socket transport's send loop completed gracefully." 
 2022-09-06 17:16:12.1800|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMKFQ62LN4K2" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-09-06 18:31:31.3590|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2022-09-06 18:31:31.3590|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2022-09-06 18:31:31.4899|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

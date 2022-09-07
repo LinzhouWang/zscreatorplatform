@@ -20,9 +20,11 @@ using ZSCreatorPlatform.Web.WebApi.Models;
 using ZSCreatorPlatform.Web.WebApi.Models.Account;
 using NLog;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Cors;
 
 namespace ZSCreatorPlatform.Web.WebApi.Controllers
-{
+{   
+    [EnableCors("any")]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class AccountController : ControllerBase

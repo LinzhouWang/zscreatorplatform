@@ -81,3 +81,14 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ref\ZSCreatorPlatform.Web.WebApi.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.pdb
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.genruntimeconfig.cache
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\MySqlConnector.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\Pomelo.JsonObject.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Model.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Model.pdb

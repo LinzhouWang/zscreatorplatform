@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,6 +17,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZSCreatorPlatform.Model.Models;
 using ZSCreatorPlatform.Web.WebApi.Extensions;
 using ZSCreatorPlatform.Web.WebApi.Extensions.ActionFilters;
 //using ZSCreatorPlatform.Web.WebApi.Extensions.Cache;
@@ -38,6 +40,22 @@ namespace ZSCreatorPlatform.Web.WebApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddCors(options=> 
+            {
+                options.AddPolicy("any",builder=> 
+                {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+
+            services.AddDbContextPool<ZSAuthContext>(builder=> 
+            {
+                builder.UseMySql(_configuration.GetConnectionString("DefaultDbConnectionString"));
+            });
+
             services.AddOptions();
             services.Configure<JwtConfigDto>(_configuration.GetSection("JwtConfiguration"));
 
@@ -164,7 +182,7 @@ namespace ZSCreatorPlatform.Web.WebApi
                 options.SerializerSettings.DateFormatString = "yyyy/MM/dd HH:mm:ss";//ºÊ»›ios"yyyy-MM-dd HH:mm:ss"≤ª÷ß≥÷
                 options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
-
+            //Directory
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -187,6 +205,8 @@ namespace ZSCreatorPlatform.Web.WebApi
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors("any");
 
             app.UseAuthentication();
 
