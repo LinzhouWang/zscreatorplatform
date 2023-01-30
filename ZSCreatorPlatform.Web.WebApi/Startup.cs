@@ -1,5 +1,7 @@
 using CSRedisDistributed;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -41,23 +43,27 @@ namespace ZSCreatorPlatform.Web.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddCors(options=> 
-            {
-                options.AddPolicy("any",builder=> 
+            #region 跨域配置
+            
+            services.AddCors(options =>
                 {
-                    builder.AllowAnyOrigin()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
+                    options.AddPolicy("any", builder =>
+                 {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
                 });
-            });
+
+            #endregion
+
 
             services.AddDbContextPool<ZSAuthContext>(builder=> 
             {
                 builder.UseMySql(_configuration.GetConnectionString("DefaultDbConnectionString"));
             });
 
-            services.AddOptions();
-            services.Configure<JwtConfigDto>(_configuration.GetSection("JwtConfiguration"));
+            services.AddOptions().Configure<JwtConfigDto>(_configuration.GetSection("JwtConfiguration"));
 
             #region Cache
 
@@ -71,6 +77,9 @@ namespace ZSCreatorPlatform.Web.WebApi
             #endregion
 
             #region Authentication Authorization
+
+
+            #region JwtBearer
             var jwtConfigDto = _configuration.GetSection("JwtConfiguration").Get<JwtConfigDto>();
             //决定用哪种认证方式，以及认证信息配置，请求未授权返回，请求禁止返回，token失效原因
             services.AddAuthentication(options =>
@@ -146,7 +155,40 @@ namespace ZSCreatorPlatform.Web.WebApi
                      builder.Requirements.Add(new CAuthorizationRequirement());
                  });
             });
-            services.AddScoped<IAuthorizationHandler, CAuthorizationHandler>(); 
+            services.AddScoped<IAuthorizationHandler, CAuthorizationHandler>();
+            #endregion
+
+
+            #region Cookie
+            //基于角色role、基于声明claim、基于策略policy、自定义custom
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignOutScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = nameof(DefaultAuthenticationHandler);
+                options.DefaultForbidScheme = nameof(DefaultAuthenticationHandler);
+            })
+            .AddCookie()
+            .AddScheme<AuthenticationSchemeOptions, DefaultAuthenticationHandler>(nameof(DefaultAuthenticationHandler), options => { });
+            #endregion
+
+            #region IdentityServer4
+            
+            var identityServerUrl = _configuration.GetSection("IdentityServer:IdentityServerUrl").Value;
+            if (!string.IsNullOrWhiteSpace(identityServerUrl))
+            {
+                services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.Authority = identityServerUrl;
+                    options.RequireHttpsMetadata = false;
+                    options.Audience = "zscreatorplatform";
+                });
+            }
+            
+            #endregion
+
+
             #endregion
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -168,7 +210,7 @@ namespace ZSCreatorPlatform.Web.WebApi
             services.AddSwaggerGen();
 
 
-            services.AddControllers(options=> 
+            services.AddControllersWithViews(options=> 
             {
                 //实体验证
                 options.Filters.Add<CActionFilterAttribute>();
@@ -183,6 +225,7 @@ namespace ZSCreatorPlatform.Web.WebApi
                 options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
             //Directory
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

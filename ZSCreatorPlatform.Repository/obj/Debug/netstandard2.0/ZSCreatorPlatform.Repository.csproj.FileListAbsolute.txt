@@ -1,0 +1,10 @@
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\bin\Debug\netstandard2.0\ZSCreatorPlatform.Repository.deps.json
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\bin\Debug\netstandard2.0\ZSCreatorPlatform.Repository.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\bin\Debug\netstandard2.0\ZSCreatorPlatform.Repository.pdb
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.csproj.AssemblyReference.cache
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.GeneratedMSBuildEditorConfig.editorconfig
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.AssemblyInfoInputs.cache
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.AssemblyInfo.cs
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.csproj.CoreCompileInputs.cache
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.dll
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Repository\obj\Debug\netstandard2.0\ZSCreatorPlatform.Repository.pdb

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rCmNCfwOlwI8hQ/okuvvaH0i8LyeRrB8XMZjuCLnR8Fikn2RnYL+TDy7puFWCEFr4ZqCH9t6XtfQ9o0/Mm83IA==",
+  "dgSpecHash": "iVbfT0Zd+juWw+n0xWjz/0MpQ4TsnT1VXv2UBLR5apb7xQd4TG7MXG9Ozu6qIj1V55AuU+Ob6IqpJUXZPU6s2g==",
   "success": true,
   "projectFilePath": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Repository\\ZSCreatorPlatform.Repository.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

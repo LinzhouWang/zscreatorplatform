@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DHHBeLV3n5gBY7LfPius/rim7A+wNcnd6BhVEq+rUoWgGsMgPK3hzizXltLMK8tIAIjrSV9uNY5KSEonPrE20A==",
+  "dgSpecHash": "iU9p6D+f/ohuZQHy7KS2tDe4mDG5TspWmsmKI5sWDzlI1q6NOpGJ/WAUeISe9lwjkB7si6NlyKh57khd9sIong==",
   "success": true,
   "projectFilePath": "G:\\王林州\\发发房项目\\发发房微信号拓客\\发发房文章创作平台\\GitVersion\\zscreatorplatform\\ZSCreatorPlatform.Web.WebApi\\ZSCreatorPlatform.Web.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\csrediscore\\3.8.3\\csrediscore.3.8.3.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\csredisdistributed\\1.0.0\\csredisdistributed.1.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\identitymodel\\4.0.0\\identitymodel.4.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\identitymodel.aspnetcore.oauth2introspection\\4.0.1\\identitymodel.aspnetcore.oauth2introspection.4.0.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\identityserver4.accesstokenvalidation\\3.0.1\\identityserver4.accesstokenvalidation.3.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.17\\microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.17\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.17.nupkg.sha512",
@@ -52,7 +55,8 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

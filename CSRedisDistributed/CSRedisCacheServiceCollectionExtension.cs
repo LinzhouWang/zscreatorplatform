@@ -29,8 +29,7 @@ namespace CSRedisDistributed
                 throw new ArgumentNullException(nameof(setupAction));
             }
 
-            services.AddOptions();//已配置过
-            services.Configure(setupAction);
+            services.AddOptions<RedisOptions>().Configure(setupAction);
             services.AddSingleton<IDistributedCSRedisCache, DistributedCSRedisCache>();
             return services;
         }

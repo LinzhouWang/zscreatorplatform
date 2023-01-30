@@ -1,0 +1,70 @@
+2022-12-03 09:26:47.0681|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:27:23.4589|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:27:23.4846|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:27:23.4846|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:29:25.0073|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|Response status code does not indicate success: 302 (Moved Temporarily). |url: http://localhost/Home/Index|action: Index|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-12-03 09:30:48.8916|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|Response status code does not indicate success: 302 (Moved Temporarily). |url: http://localhost/Home/Index|action: Index|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-12-03 09:31:19.9515|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|Response status code does not indicate success: 302 (Moved Temporarily). |url: http://localhost/Home/Index|action: Index|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-12-03 09:34:06.7506|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:34:14.6028|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:34:14.6633|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:34:14.6633|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:35:08.4866|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|The operation was canceled. |url: http://localhost/Home/Index|action: Index|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-12-03 09:36:10.7135|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|A task was canceled. |url: http://localhost/Home/Index|action: Index|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-12-03 09:37:55.0514|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:37:58.5859|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:37:58.6556|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:37:58.6556|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:41:42.7121|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:41:46.8786|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:41:46.9281|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:41:46.9588|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:43:02.4534|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:43:06.6930|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:43:06.7727|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:43:06.7727|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:45:00.2696|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:45:03.5399|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:45:03.5931|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:45:03.5931|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:47:09.6008|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:47:12.8360|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:47:12.9615|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:47:12.9615|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:49:16.3675|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 09:49:22.9935|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:49:23.7107|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:49:23.7107|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 09:50:14.6499|0|ERROR|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter|The operation was canceled. |url: http://localhost/Home/Index|action: Index|ZSCreatorPlatform.Web.WebApi.Extensions.Exception.CExceptionFilter.OnException
+2022-12-03 10:38:31.6098|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 10:38:39.4057|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:38:39.4363|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:38:39.4363|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:42:41.3193|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 10:42:46.2131|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:42:46.3195|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:42:46.3195|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:50:32.5259|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 10:50:36.4697|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:50:36.6231|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:50:36.6236|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:54:33.5797|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 10:54:37.3003|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:54:37.4159|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 10:54:37.4159|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:40:57.4955|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 15:41:03.2610|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:41:03.3040|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:41:03.3040|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:43:00.8164|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 15:43:04.4578|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:43:04.5310|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:43:04.5310|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:45:15.6344|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 15:45:19.9153|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:45:20.0285|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:45:20.0458|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:52:41.0968|0|DEBUG|ZSCreatorPlatform.Web.WebApi.Program|init main |url: |action: |ZSCreatorPlatform.Web.WebApi.Program.Main
+2022-12-03 15:52:44.8757|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:52:44.9470|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2022-12-03 15:52:44.9470|0|INFO|Microsoft.Hosting.Lifetime|Content root path: G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted

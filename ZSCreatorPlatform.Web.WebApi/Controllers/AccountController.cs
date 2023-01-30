@@ -21,6 +21,8 @@ using ZSCreatorPlatform.Web.WebApi.Models.Account;
 using NLog;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.Extensions.Caching.Memory;
+using System.Threading;
 
 namespace ZSCreatorPlatform.Web.WebApi.Controllers
 {   
@@ -32,13 +34,16 @@ namespace ZSCreatorPlatform.Web.WebApi.Controllers
 
         private readonly JwtConfigDto _jwtConfigDto;
 
+        private readonly IMemoryCache _memoryCache;
+
         private readonly IDistributedCSRedisCache _distributedCache;
 
         private readonly ILogger<AccountController> _logger;
 
-        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto, IDistributedCSRedisCache distributedCache,ILogger<AccountController> logger)
+        public AccountController(IOptionsMonitor<JwtConfigDto> jwtConfigDto,IMemoryCache memoryCache, IDistributedCSRedisCache distributedCache,ILogger<AccountController> logger)
         {
             _jwtConfigDto = jwtConfigDto.CurrentValue;
+            _memoryCache = memoryCache;
             _distributedCache = distributedCache;
             _logger = logger;
         }
