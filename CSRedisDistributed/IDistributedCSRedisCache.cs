@@ -30,10 +30,323 @@ namespace CSRedisDistributed
 
         #region string
 
+        /// <summary>
+        /// 保存单个string值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="expire"></param>
+        /// <returns></returns>
+        bool StringSet(string key,string value,TimeSpan? expire=default);
+
+        /// <summary>
+        /// 保存单个string值异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="expire"></param>
+        /// <returns></returns>
+        Task<bool> StringSetAsync(string key,string value,TimeSpan? expire=default);
+
+        /// <summary>
+        /// 保存单个对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="obj"></param>
+        /// <param name="expire"></param>
+        /// <returns></returns>
+        bool StringSet<T>(string key,T obj,TimeSpan? expire=default);
+
+        /// <summary>
+        /// 保存单个对象异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="obj"></param>
+        /// <param name="expire"></param>
+        /// <returns></returns>
+        Task<bool> StringSetAsync<T>(string key,T obj,TimeSpan? expire=default);
+
+        /// <summary>
+        /// 获取单个string值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        string StringGet(string key);
+
+        /// <summary>
+        /// 获取单个string值异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        Task<string> StringGetAsync(string key);
+
+        /// <summary>
+        /// 获取多个string值
+        /// </summary>
+        /// <param name="keys"></param>
+        /// <returns></returns>
+        List<string> StringGetList(List<string> keys);
+        
+        /// <summary>
+        /// 获取多个string值异步
+        /// </summary>
+        /// <param name="keys"></param>
+        /// <returns></returns>
+        Task<List<string>> StringGetListAsync(List<string> keys);
+
+        /// <summary>
+        /// 获取一个key的对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        T StringGet<T>(string key);
+
+        /// <summary>
+        /// 获取一个key的对象异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        Task<T> StringGetAsync<T>(string key);
+
+        /// <summary>
+        /// 为数值增长val
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        long StringIncrement(string key,long val=1);
+
+        /// <summary>
+        /// 为数值增长val异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        Task<long> StringIncrementAsync(string key,long val=1);
+
+        /// <summary>
+        /// 为数值减少val
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        long StringDecrement(string key,long val=1);
+
+        /// <summary>
+        /// 为数值减少val异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        Task<long> StringDecrementAsync(string key,long val=1);
+
+        /// <summary>
+        /// 设置Nx,只有key不存在时设置val值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        bool SetNx<T>(string key,T val);
+
+        /// <summary>
+        /// 设置Nx，只有key不存在时设置val值异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        Task<bool> SetNxAsync<T>(string key,T val);
+
         #endregion
 
 
         #region hash
+
+        /// <summary>
+        /// 判断某个数据是否已经存在
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <returns></returns>
+        bool HashExists(string key,string dataKey);
+
+        /// <summary>
+        /// 判断某个数据是否已经存在异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <returns></returns>
+        Task<bool> HaskExistsAsync(string key,string dataKey);
+
+        /// <summary>
+        /// 存储数据到hash表
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        bool HashSet<T>(string key,string dataKey,T t);
+
+        /// <summary>
+        /// 存储数据到hash表异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        Task<bool> HashSetAsync<T>(string key,string dataKey,T t);
+
+        /// <summary>
+        /// 批量设置Hash
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dics"></param>
+        /// <returns></returns>
+        bool HashSetList(string key,Dictionary<string,object> dics);
+
+        /// <summary>
+        /// 批量设置Hash异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dics"></param>
+        /// <returns></returns>
+        Task<bool> HashSetListAsync(string key,Dictionary<string,object> dics);
+
+        /// <summary>
+        /// 移除hash中的某个值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <returns></returns>
+        bool HashDelete(string key,string dataKey);
+
+        /// <summary>
+        /// 移除hash中的某个值异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <returns></returns>
+        Task<bool> HashDeleteAsync(string key,string dataKey);
+
+        /// <summary>
+        /// 移除hash中的多个值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKeys"></param>
+        /// <returns></returns>
+        long HashDeleteList(string key,List<string> dataKeys);
+
+        /// <summary>
+        /// 移除hash中的多个值异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKeys"></param>
+        /// <returns></returns>
+        Task<long> HashDeleteListAsync(string key,List<string> dataKeys);
+
+        /// <summary>
+        /// 从hash表获取数据
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <returns></returns>
+        T HashGet<T>(string key,string dataKey);
+
+        /// <summary>
+        /// 从hash表获取数据异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <returns></returns>
+        Task<T> HashGetAsync<T>(string key,string dataKey);
+
+        /// <summary>
+        /// 从hash表获取数据字典集合
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKeys"></param>
+        /// <returns></returns>
+        Dictionary<string, T> HashGetDics<T>(string key,List<string> dataKeys);
+
+        /// <summary>
+        /// 从hash表获取数据字典集合异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKeys"></param>
+        /// <returns></returns>
+        Task<Dictionary<string, T>> HashGetDicsAsync<T>(string key,List<string> dataKeys);
+
+        /// <summary>
+        /// 为hash数值增长val
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        long HashIncrement(string key,string dataKey,long val=1);
+
+        /// <summary>
+        /// 为hash数值增长val异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        Task<long> HashIncrementAsync(string key,string dataKey,long val=1);
+
+        /// <summary>
+        /// 为hash数值减少val
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        long HashDecrement(string key,string dataKey,long val=1);
+
+        /// <summary>
+        /// 为hash数值减少val
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        Task<long> HashDecrementAsync(string key,string dataKey,long val=1);
+
+        /// <summary>
+        /// 获取hashkey所有redis key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        List<string> HashKeys(string key);
+
+        /// <summary>
+        /// 获取hashkey所有redis key异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        Task<List<string>> HashKeysAsync(string key);
+
+        /// <summary>
+        /// HashSetNx 只有字段dataKey值不存在时设置hash表字段的值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="dataKey"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        bool HashSetNx<T>(string key,string dataKey,T val);
+
 
         #endregion
 
@@ -58,12 +371,26 @@ namespace CSRedisDistributed
         /// <summary>
         /// 删除单个key
         /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        bool KeyDelete(string key);
+
+        /// <summary>
+        /// 删除单个key异步
+        /// </summary>
         /// <param name="key">redis key</param>
         /// <returns>is successful</returns>
         Task<bool> KeyDeleteAsync(string key);
 
         /// <summary>
         /// 删除多个key
+        /// </summary>
+        /// <param name="keys"></param>
+        /// <returns></returns>
+        long KeyDelete(List<string> keys);
+
+        /// <summary>
+        /// 删除多个key异步
         /// </summary>
         /// <param name="keys">redis key</param>
         /// <returns>successful number</returns>
@@ -72,9 +399,24 @@ namespace CSRedisDistributed
         /// <summary>
         /// 判断key是否存在
         /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        bool KeyExists(string key);
+
+        /// <summary>
+        /// 判断key是否存在
+        /// </summary>
         /// <param name="key">redis key</param>
         /// <returns>is successful</returns>
         Task<bool> KeyExistsAsync(string key);
+
+        /// <summary>
+        /// 重新命名key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="newKey"></param>
+        /// <returns></returns>
+        bool KeyRename(string key,string newKey);
 
         /// <summary>
         /// 重新命名key
@@ -87,13 +429,29 @@ namespace CSRedisDistributed
         /// <summary>
         /// 设置key的过期时长
         /// </summary>
+        /// <param name="key"></param>
+        /// <param name="expire"></param>
+        /// <returns></returns>
+        bool KeyExpire(string key,TimeSpan? expire=default);
+
+        /// <summary>
+        /// 设置key的过期时长异步
+        /// </summary>
         /// <param name="key">redis key</param>
         /// <param name="expire">expire timespan</param>
         /// <returns>is successful</returns>
         Task<bool> KeyExpireAsync(string key,TimeSpan? expire=default);
 
         /// <summary>
-        /// 设置key过期时间
+        /// 设置key的过期时间
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="expire"></param>
+        /// <returns></returns>
+        bool KeyExpireAt(string key,DateTime expire);
+
+        /// <summary>
+        /// 设置key过期时间异步
         /// </summary>
         /// <param name="key">redis key</param>
         /// <param name="expire">expire time</param>
@@ -103,9 +461,16 @@ namespace CSRedisDistributed
         /// <summary>
         /// 搜索key
         /// </summary>
+        /// <param name="pattern"></param>
+        /// <returns></returns>
+        List<string> SearchKeys(string pattern);
+
+        /// <summary>
+        /// 搜索key异步
+        /// </summary>
         /// <param name="pattern">表达式</param>
         /// <returns></returns>
-        Task<List<string>> SearchKeys(string pattern);
+        Task<List<string>> SearchKeysAsync(string pattern);
 
         #endregion
 
