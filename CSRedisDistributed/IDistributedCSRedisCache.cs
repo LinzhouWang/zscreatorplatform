@@ -363,6 +363,188 @@ namespace CSRedisDistributed
 
         #region zset(sorted set)
 
+        /// <summary>
+        /// 向有序集合添加一个成员，或者更新已存在成员的分数
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <param name="score"></param>
+        /// <returns></returns>
+        long ZAdd<T>(string key,T val,double score);
+
+        /// <summary>
+        /// 向有序集合添加一个成员，或者更新以存在成员的分数异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <param name="score"></param>
+        /// <returns></returns>
+        Task<long> ZAddAsync<T>(string key,T val,double score);
+
+        /// <summary>
+        /// 向有序集合添加成员集合，或者更新已存在成员的分数
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="scoreMembers"></param>
+        /// <returns></returns>
+        long ZAddList<T>(string key,List<(double,T)> scoreMembers);
+
+        /// <summary>
+        /// 向有序集合添加成员集合，或者更新已经存在成员的分数异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="socreMembers"></param>
+        /// <returns></returns>
+        Task<long> ZAddListAsync<T>(string key,List<(double,T)> socreMembers);
+
+        /// <summary>
+        /// 获取指定成员排名
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="member"></param>
+        /// <returns></returns>
+        long? ZRank<T>(string key,T member);
+
+        /// <summary>
+        /// 获取指定成员排名异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="member"></param>
+        /// <returns></returns>
+        Task<long?> ZRankAsync<T>(string key,T member);
+
+        /// <summary>
+        /// 增加指定成员分数
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="member"></param>
+        /// <param name="increment"></param>
+        /// <returns></returns>
+        decimal ZIncrBy(string key,string member,decimal increment);
+
+        /// <summary>
+        /// 增加指定成员分数异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="member"></param>
+        /// <param name="increment"></param>
+        /// <returns></returns>
+        Task<decimal> ZIncrByAsync(string key,string member,decimal increment);
+
+        /// <summary>
+        /// 删除指定单个或多个成员
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="member"></param>
+        /// <returns></returns>
+        long ZRem<T>(string key,List<T> member);
+
+        /// <summary>
+        /// 删除指定单个或多个成员异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="member"></param>
+        /// <returns></returns>
+        Task<long> ZRemAsync<T>(string key,List<T> member);
+
+        /// <summary>
+        /// 获取全部成员
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        List<T> ZRangeAll<T>(string key,int endIndex=1000);
+
+        /// <summary>
+        /// 获取全部成员异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        Task<List<T>> ZRangeAllAsync<T>(string key,int endIndex=1000);
+
+        /// <summary>
+        /// 获取指定索引范围内成员
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        List<T> ZRange<T>(string key, int startIndex, int endIndex);
+
+        /// <summary>
+        /// 获取指定索引范围内成员异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        Task<List<T>> ZRangeAsync<T>(string key,int startIndex,int endIndex);
+
+        /// <summary>
+        /// 获取分数降序指定索引范围内成员
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        List<T> ZRevRange<T>(string key,int startIndex,int endIndex);
+
+        /// <summary>
+        /// 获取分数降序指定索引范围内成员异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        Task<List<T>> ZRevRangeAsync<T>(string key,int startIndex,int endIndex);
+
+        /// <summary>
+        /// 判断是否存在项
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        bool ZScore<T>(string key,T val);
+
+        /// <summary>
+        /// 判断是否存在项异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        Task<bool> ZScoreAsync<T>(string key,T val);
+
+        /// <summary>
+        /// 获取集合中的数量
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        long ZCard(string key);
+
+        /// <summary>
+        /// 获取集合中的数量异步
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        Task<long> ZCardAsync(string key);
+
         #endregion
 
 
