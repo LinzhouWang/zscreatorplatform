@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
+﻿using CSRedis;
+using Microsoft.Extensions.Caching.Distributed;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace CSRedisDistributed
     /// <summary>
     /// 分布式redis缓存接口
     /// </summary>
-    public interface IDistributedRedisCache:IDisposable
+    public interface IDistributedRedisCache
     {
 
         #region string
@@ -584,20 +585,20 @@ namespace CSRedisDistributed
         /// <summary>
         /// 向有序集合添加成员集合，或者更新已存在成员的分数
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="object"></typeparam>
         /// <param name="key"></param>
         /// <param name="scoreMembers"></param>
         /// <returns></returns>
-        long ZAddList<T>(string key,List<(double,T)> scoreMembers);
+        long ZAddList(string key,List<(decimal,object)> scoreMembers);
 
         /// <summary>
         /// 向有序集合添加成员集合，或者更新已经存在成员的分数异步
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="object"></typeparam>
         /// <param name="key"></param>
         /// <param name="socreMembers"></param>
         /// <returns></returns>
-        Task<long> ZAddListAsync<T>(string key,List<(double,T)> socreMembers);
+        Task<long> ZAddListAsync(string key,List<(decimal,object)> socreMembers);
 
         /// <summary>
         /// 获取指定成员排名
@@ -881,6 +882,18 @@ namespace CSRedisDistributed
     /// </summary>
     public class DistributedRedisCache : IDistributedRedisCache
     {
+
+        #region Ctors
+
+        public DistributedRedisCache(RedisNewOptions redisOption)
+        {
+            var csredis = new CSRedisClient(
+                $"{redisOption.Server}:{redisOption.Port},defaultDatabase={redisOption.DataBase},password={redisOption.Password},idleTimeout=3000,prefix={redisOption.Name},poolsize={redisOption.PoolSize}");
+            RedisHelper.Initialization(csredis);
+        }
+
+        #endregion
+
 
         #region string
 
@@ -1404,7 +1417,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        long ListRemove<T>(string key, T val);
+        public long ListRemove<T>(string key, T val)
+        {
+            return RedisHelper.LRem(key,int.MaxValue,val);
+        }
 
         /// <summary>
         /// 移除指定list中的某一项异步
@@ -1413,7 +1429,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        Task<long> ListRemoveAsync<T>(string key, T val);
+        public async Task<long> ListRemoveAsync<T>(string key, T val)
+        {
+            var res = await RedisHelper.LRemAsync(key,int.MaxValue,val);
+            return res;
+        }
 
         /// <summary>
         /// 获取指定key指定范围内的list
@@ -1422,7 +1442,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="count"></param>
         /// <returns></returns>
-        List<T> ListRange<T>(string key, int count = 1000);
+        public List<T> ListRange<T>(string key, int count = 1000)
+        {
+            return RedisHelper.LRange<T>(key,0,count).ToList();
+        }
 
         /// <summary>
         /// 获取指定key指定范围内的list异步
@@ -1431,7 +1454,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="count"></param>
         /// <returns></returns>
-        Task<List<T>> ListRangeAsync<T>(string key, int count = 1000);
+        public async Task<List<T>> ListRangeAsync<T>(string key, int count = 1000)
+        {
+            var res = await RedisHelper.LRangeAsync<T>(key,0,count);
+            return res.ToList();
+        }
 
         /// <summary>
         /// 入队
@@ -1440,7 +1467,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        long ListRightPush<T>(string key, T val);
+        public long ListRightPush<T>(string key, T val)
+        {
+            return RedisHelper.RPush<T>(key,val);
+        }
 
         /// <summary>
         /// 入队异步
@@ -1449,7 +1479,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        Task<long> ListRightPushAsync<T>(string key, T val);
+        public async Task<long> ListRightPushAsync<T>(string key, T val)
+        {
+            var res = await RedisHelper.RPushAsync<T>(key,val);
+            return res;
+        }
 
         /// <summary>
         /// 批量入队
@@ -1458,7 +1492,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="vals"></param>
         /// <returns></returns>
-        long ListRightPush<T>(string key, List<T> vals);
+        public long ListRightPush<T>(string key, List<T> vals)
+        {
+            return RedisHelper.RPush(key,vals);
+        }
 
         /// <summary>
         /// 批量入队异步
@@ -1467,7 +1504,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="vals"></param>
         /// <returns></returns>
-        Task<long> ListRightPushAsync<T>(string key, List<T> vals);
+        public async Task<long> ListRightPushAsync<T>(string key, List<T> vals)
+        {
+            var res = await RedisHelper.RPushAsync(key,vals);
+            return res;
+        }
 
         /// <summary>
         /// 出队
@@ -1475,7 +1516,10 @@ namespace CSRedisDistributed
         /// <typeparam name="T"></typeparam>
         /// <param name="key"></param>
         /// <returns></returns>
-        T ListRightPop<T>(string key);
+        public T ListRightPop<T>(string key)
+        {
+            return RedisHelper.RPop<T>(key);
+        }
 
         /// <summary>
         /// 出对异步
@@ -1483,7 +1527,11 @@ namespace CSRedisDistributed
         /// <typeparam name="T"></typeparam>
         /// <param name="key"></param>
         /// <returns></returns>
-        Task<T> ListRightPopAsync<T>(string key);
+        public async Task<T> ListRightPopAsync<T>(string key)
+        {
+            var res = await RedisHelper.RPopAsync<T>(key);
+            return res;
+        }
 
         /// <summary>
         /// 入栈
@@ -1492,7 +1540,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        long ListLeftPush<T>(string key, T val);
+        public long ListLeftPush<T>(string key, T val)
+        {
+            return RedisHelper.LPush<T>(key,val);
+        }
 
         /// <summary>
         /// 入栈异步
@@ -1501,7 +1552,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        Task<long> ListLeftPushAsync<T>(string key, T val);
+        public async Task<long> ListLeftPushAsync<T>(string key, T val)
+        {
+            var res = await RedisHelper.LPushAsync<T>(key,val);
+            return res;
+        }
 
         /// <summary>
         /// 批量入栈
@@ -1510,7 +1565,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="vals"></param>
         /// <returns></returns>
-        long ListLeftPush<T>(string key, List<T> vals);
+        public long ListLeftPush<T>(string key, List<T> vals)
+        {
+            return RedisHelper.LPush(key,vals);
+        }
 
         /// <summary>
         /// 批量入栈异步
@@ -1519,7 +1577,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="vals"></param>
         /// <returns></returns>
-        Task<long> ListLeftPushAsync<T>(string key, List<T> vals);
+        public async Task<long> ListLeftPushAsync<T>(string key, List<T> vals)
+        {
+            var res = await RedisHelper.LPushAsync(key,vals);
+            return res;
+        }
 
         /// <summary>
         /// 出栈
@@ -1527,7 +1589,10 @@ namespace CSRedisDistributed
         /// <typeparam name="T"></typeparam>
         /// <param name="key"></param>
         /// <returns></returns>
-        T ListLeftPop<T>(string key);
+        public T ListLeftPop<T>(string key)
+        {
+            return RedisHelper.LPop<T>(key);
+        }
 
         /// <summary>
         /// 出栈
@@ -1535,21 +1600,32 @@ namespace CSRedisDistributed
         /// <typeparam name="T"></typeparam>
         /// <param name="key"></param>
         /// <returns></returns>
-        Task<T> ListLeftPopAsync<T>(string key);
+        public async Task<T> ListLeftPopAsync<T>(string key)
+        {
+            var res = await RedisHelper.LPopAsync<T>(key);
+            return res;
+        }
 
         /// <summary>
         /// 获取集合中的数量
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        long ListLength(string key);
+        public long ListLength(string key)
+        {
+            return RedisHelper.LLen(key);
+        }
 
         /// <summary>
         /// 获取集合中的数量异步
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        Task<long> ListLengthAsync(string key);
+        public async Task<long> ListLengthAsync(string key)
+        {
+            var res = await RedisHelper.LLenAsync(key);
+            return res;
+        }
 
         /// <summary>
         /// 对一个列表进行裁剪，只保留指定区间内元素，不包含在区间内的元素进行删除
@@ -1558,7 +1634,10 @@ namespace CSRedisDistributed
         /// <param name="start">开始位置，0代表第一个元素，-1代表最后一个元素</param>
         /// <param name="stop">结束位置，0代表第一个元素，-1代表最后一个元素</param>
         /// <returns></returns>
-        bool ListTrim(string key, long start, long stop);
+        public bool ListTrim(string key, long start, long stop)
+        {
+            return RedisHelper.LTrim(key,start,stop);
+        }
 
         /// <summary>
         /// 对一个列表进行裁剪，只保留指定区间内元素，不包含在区间内的元素进行删除异步
@@ -1567,21 +1646,32 @@ namespace CSRedisDistributed
         /// <param name="start">开始位置，0代表第一个元素，-1代表最后一个元素</param>
         /// <param name="stop">结束位置，0代表第一个元素，-1代表最后一个元素</param>
         /// <returns></returns>
-        Task<bool> ListTrimAsync(string key, long start, long stop);
+        public async Task<bool> ListTrimAsync(string key, long start, long stop)
+        {
+            var res = await RedisHelper.LTrimAsync(key,start,stop);
+            return res;
+        }
 
         /// <summary>
         /// 获取集合内随机值
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        string GetListRandMember(string key);
+        public string GetListRandMember(string key)
+        {
+            return RedisHelper.SRandMember(key);
+        }
 
         /// <summary>
         /// 获取集合内随机值异步
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        Task<string> GetListRandMemberAsync(string key);
+        public async Task<string> GetListRandMemberAsync(string key)
+        {
+            var res = await RedisHelper.SRandMemberAsync(key);
+            return res;
+        }
 
         #endregion
 
@@ -1601,7 +1691,10 @@ namespace CSRedisDistributed
         /// <param name="val"></param>
         /// <param name="score"></param>
         /// <returns></returns>
-        long ZAdd<T>(string key, T val, double score);
+        public long ZAdd<T>(string key, T val, double score)
+        {
+            return RedisHelper.ZAdd(key,(Convert.ToDecimal(score),val));
+        }
 
         /// <summary>
         /// 向有序集合添加一个成员，或者更新以存在成员的分数异步
@@ -1611,25 +1704,34 @@ namespace CSRedisDistributed
         /// <param name="val"></param>
         /// <param name="score"></param>
         /// <returns></returns>
-        Task<long> ZAddAsync<T>(string key, T val, double score);
+        public async Task<long> ZAddAsync<T>(string key, T val, double score)
+        {
+            return await RedisHelper.ZAddAsync(key,(Convert.ToDecimal(score),val));
+        }
 
         /// <summary>
         /// 向有序集合添加成员集合，或者更新已存在成员的分数
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="object"></typeparam>
         /// <param name="key"></param>
         /// <param name="scoreMembers"></param>
         /// <returns></returns>
-        long ZAddList<T>(string key, List<(double, T)> scoreMembers);
+        public long ZAddList(string key, List<(decimal, object)> scoreMembers)
+        {
+            return RedisHelper.ZAdd(key,scoreMembers.ToArray());
+        }
 
         /// <summary>
         /// 向有序集合添加成员集合，或者更新已经存在成员的分数异步
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="object"></typeparam>
         /// <param name="key"></param>
         /// <param name="socreMembers"></param>
         /// <returns></returns>
-        Task<long> ZAddListAsync<T>(string key, List<(double, T)> socreMembers);
+        public async Task<long> ZAddListAsync(string key, List<(decimal, object)> socreMembers)
+        {
+            return await RedisHelper.ZAddAsync(key, socreMembers.ToArray());
+        }
 
         /// <summary>
         /// 获取指定成员排名
@@ -1638,7 +1740,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="member"></param>
         /// <returns></returns>
-        long? ZRank<T>(string key, T member);
+        public long? ZRank<T>(string key, T member)
+        {
+            return RedisHelper.ZRank(key,member);
+        }
 
         /// <summary>
         /// 获取指定成员排名异步
@@ -1647,7 +1752,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="member"></param>
         /// <returns></returns>
-        Task<long?> ZRankAsync<T>(string key, T member);
+        public async Task<long?> ZRankAsync<T>(string key, T member)
+        {
+            return await RedisHelper.ZRankAsync(key,member);
+        }
 
         /// <summary>
         /// 增加指定成员分数
@@ -1656,7 +1764,10 @@ namespace CSRedisDistributed
         /// <param name="member"></param>
         /// <param name="increment"></param>
         /// <returns></returns>
-        decimal ZIncrBy(string key, string member, decimal increment);
+        public decimal ZIncrBy(string key, string member, decimal increment)
+        {
+            return RedisHelper.ZIncrBy(key,member,increment);
+        }
 
         /// <summary>
         /// 增加指定成员分数异步
@@ -1665,7 +1776,10 @@ namespace CSRedisDistributed
         /// <param name="member"></param>
         /// <param name="increment"></param>
         /// <returns></returns>
-        Task<decimal> ZIncrByAsync(string key, string member, decimal increment);
+        public async Task<decimal> ZIncrByAsync(string key, string member, decimal increment)
+        {
+            return await RedisHelper.ZIncrByAsync(key,member,increment);
+        }
 
         /// <summary>
         /// 删除指定单个或多个成员
@@ -1674,7 +1788,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="member"></param>
         /// <returns></returns>
-        long ZRem<T>(string key, List<T> member);
+        public long ZRem<T>(string key, List<T> member)
+        {
+            return RedisHelper.ZRem<T>(key,member.ToArray());
+        }
 
         /// <summary>
         /// 删除指定单个或多个成员异步
@@ -1683,7 +1800,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="member"></param>
         /// <returns></returns>
-        Task<long> ZRemAsync<T>(string key, List<T> member);
+        public async Task<long> ZRemAsync<T>(string key, List<T> member)
+        {
+            return await RedisHelper.ZRemAsync<T>(key,member.ToArray());
+        }
 
         /// <summary>
         /// 获取全部成员
@@ -1692,7 +1812,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="endIndex"></param>
         /// <returns></returns>
-        List<T> ZRangeAll<T>(string key, int endIndex = 1000);
+        public List<T> ZRangeAll<T>(string key, int endIndex = 1000)
+        {
+            return RedisHelper.ZRange<T>(key,0,endIndex).ToList();
+        }
 
         /// <summary>
         /// 获取全部成员异步
@@ -1701,7 +1824,11 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="endIndex"></param>
         /// <returns></returns>
-        Task<List<T>> ZRangeAllAsync<T>(string key, int endIndex = 1000);
+        public async Task<List<T>> ZRangeAllAsync<T>(string key, int endIndex = 1000)
+        {
+            var res = await RedisHelper.ZRangeAsync<T>(key, 0, endIndex);
+            return res.ToList();
+        }
 
         /// <summary>
         /// 获取指定索引范围内成员
@@ -1711,7 +1838,10 @@ namespace CSRedisDistributed
         /// <param name="startIndex"></param>
         /// <param name="endIndex"></param>
         /// <returns></returns>
-        List<T> ZRange<T>(string key, int startIndex, int endIndex);
+        public List<T> ZRange<T>(string key, int startIndex, int endIndex)
+        {
+            return RedisHelper.ZRange<T>(key,startIndex,endIndex).ToList();
+        }
 
         /// <summary>
         /// 获取指定索引范围内成员异步
@@ -1721,7 +1851,11 @@ namespace CSRedisDistributed
         /// <param name="startIndex"></param>
         /// <param name="endIndex"></param>
         /// <returns></returns>
-        Task<List<T>> ZRangeAsync<T>(string key, int startIndex, int endIndex);
+        public async Task<List<T>> ZRangeAsync<T>(string key, int startIndex, int endIndex)
+        {
+            var res = await RedisHelper.ZRangeAsync<T>(key,startIndex,endIndex);
+            return res.ToList();
+        }
 
         /// <summary>
         /// 获取分数降序指定索引范围内成员
@@ -1731,7 +1865,10 @@ namespace CSRedisDistributed
         /// <param name="startIndex"></param>
         /// <param name="endIndex"></param>
         /// <returns></returns>
-        List<T> ZRevRange<T>(string key, int startIndex, int endIndex);
+        public List<T> ZRevRange<T>(string key, int startIndex, int endIndex)
+        {
+            return RedisHelper.ZRevRange<T>(key,startIndex,endIndex).ToList();
+        }
 
         /// <summary>
         /// 获取分数降序指定索引范围内成员异步
@@ -1741,7 +1878,11 @@ namespace CSRedisDistributed
         /// <param name="startIndex"></param>
         /// <param name="endIndex"></param>
         /// <returns></returns>
-        Task<List<T>> ZRevRangeAsync<T>(string key, int startIndex, int endIndex);
+        public async Task<List<T>> ZRevRangeAsync<T>(string key, int startIndex, int endIndex)
+        {
+            var res =await RedisHelper.ZRevRangeAsync<T>(key,startIndex,endIndex);
+            return res.ToList();
+        }
 
         /// <summary>
         /// 判断是否存在项
@@ -1750,7 +1891,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        bool ZScore<T>(string key, T val);
+        public bool ZScore<T>(string key, T val)
+        {
+            return RedisHelper.ZScore(key,val).HasValue;
+        }
 
         /// <summary>
         /// 判断是否存在项异步
@@ -1759,21 +1903,32 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="val"></param>
         /// <returns></returns>
-        Task<bool> ZScoreAsync<T>(string key, T val);
+        public async Task<bool> ZScoreAsync<T>(string key, T val)
+        {
+            var res = await RedisHelper.ZScoreAsync(key,val);
+            return res.HasValue;
+        }
 
         /// <summary>
         /// 获取集合中的数量
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        long ZCard(string key);
+        public long ZCard(string key)
+        {
+            return RedisHelper.ZCard(key);
+        }
 
         /// <summary>
         /// 获取集合中的数量异步
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        Task<long> ZCardAsync(string key);
+        public async Task<long> ZCardAsync(string key)
+        {
+            var res = await RedisHelper.ZCardAsync(key);
+            return res;
+        }
 
         #endregion
 
@@ -1785,42 +1940,63 @@ namespace CSRedisDistributed
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        bool KeyDelete(string key);
+        public bool KeyDelete(string key)
+        {
+            return RedisHelper.Del(key) > 0;
+        }
 
         /// <summary>
         /// 删除单个key异步
         /// </summary>
         /// <param name="key">redis key</param>
         /// <returns>is successful</returns>
-        Task<bool> KeyDeleteAsync(string key);
+        public async Task<bool> KeyDeleteAsync(string key)
+        {
+            var res = await RedisHelper.DelAsync(key) > 0;
+            return res;
+        }
 
         /// <summary>
         /// 删除多个key
         /// </summary>
         /// <param name="keys"></param>
         /// <returns></returns>
-        long KeyDelete(List<string> keys);
+        public long KeyDelete(List<string> keys)
+        {
+            return RedisHelper.Del(keys.ToArray());
+        }
 
         /// <summary>
         /// 删除多个key异步
         /// </summary>
         /// <param name="keys">redis key</param>
         /// <returns>successful number</returns>
-        Task<long> KeyDeleteAsync(List<string> keys);
+        public async Task<long> KeyDeleteAsync(List<string> keys)
+        {
+            var res = await RedisHelper.DelAsync(keys.ToArray());
+            return res;
+        }
 
         /// <summary>
         /// 判断key是否存在
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        bool KeyExists(string key);
+        public bool KeyExists(string key)
+        {
+            return RedisHelper.Exists(key);
+        }
 
         /// <summary>
         /// 判断key是否存在
         /// </summary>
         /// <param name="key">redis key</param>
         /// <returns>is successful</returns>
-        Task<bool> KeyExistsAsync(string key);
+        public async Task<bool> KeyExistsAsync(string key)
+        {
+            var res = await RedisHelper.ExistsAsync(key);
+            return res;
+        }
 
         /// <summary>
         /// 重新命名key
@@ -1828,7 +2004,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="newKey"></param>
         /// <returns></returns>
-        bool KeyRename(string key, string newKey);
+        public bool KeyRename(string key, string newKey)
+        {
+            return RedisHelper.Rename(key,newKey);
+        }
 
         /// <summary>
         /// 重新命名key
@@ -1836,7 +2015,11 @@ namespace CSRedisDistributed
         /// <param name="key">redis key</param>
         /// <param name="newKey">rename redis key</param>
         /// <returns>is successful</returns>
-        Task<bool> KeyRenameAsync(string key, string newKey);
+        public async Task<bool> KeyRenameAsync(string key, string newKey)
+        {
+            var res = await RedisHelper.RenameAsync(key,newKey);
+            return res;
+        }
 
         /// <summary>
         /// 设置key的过期时长
@@ -1844,7 +2027,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="expire"></param>
         /// <returns></returns>
-        bool KeyExpire(string key, TimeSpan? expire = default);
+        public bool KeyExpire(string key, TimeSpan? expire = default)
+        {
+            return RedisHelper.Expire(key,expire.HasValue?Convert.ToInt32(expire.Value.TotalSeconds):-1);
+        }
 
         /// <summary>
         /// 设置key的过期时长异步
@@ -1852,7 +2038,11 @@ namespace CSRedisDistributed
         /// <param name="key">redis key</param>
         /// <param name="expire">expire timespan</param>
         /// <returns>is successful</returns>
-        Task<bool> KeyExpireAsync(string key, TimeSpan? expire = default);
+        public async Task<bool> KeyExpireAsync(string key, TimeSpan? expire = default)
+        {
+            var res = await RedisHelper.ExpireAsync(key,expire.HasValue?Convert.ToInt32(expire.Value.TotalSeconds):-1);
+            return res;
+        }
 
         /// <summary>
         /// 设置key的过期时间
@@ -1860,7 +2050,10 @@ namespace CSRedisDistributed
         /// <param name="key"></param>
         /// <param name="expire"></param>
         /// <returns></returns>
-        bool KeyExpireAt(string key, DateTime expire);
+        public bool KeyExpireAt(string key, DateTime expire)
+        {
+            return RedisHelper.ExpireAt(key,expire);
+        }
 
         /// <summary>
         /// 设置key过期时间异步
@@ -1868,21 +2061,31 @@ namespace CSRedisDistributed
         /// <param name="key">redis key</param>
         /// <param name="expire">expire time</param>
         /// <returns>is successful</returns>
-        Task<bool> KeyExpireAtAsync(string key, DateTime expire);
+        public async Task<bool> KeyExpireAtAsync(string key, DateTime expire)
+        {
+            return await RedisHelper.ExpireAtAsync(key,expire);
+        }
 
         /// <summary>
         /// 搜索key
         /// </summary>
         /// <param name="pattern"></param>
         /// <returns></returns>
-        List<string> SearchKeys(string pattern);
+        public List<string> SearchKeys(string pattern)
+        {
+            return RedisHelper.Keys(pattern).ToList();
+        }
 
         /// <summary>
         /// 搜索key异步
         /// </summary>
         /// <param name="pattern">表达式</param>
         /// <returns></returns>
-        Task<List<string>> SearchKeysAsync(string pattern);
+        public async Task<List<string>> SearchKeysAsync(string pattern)
+        {
+            var res= await RedisHelper.KeysAsync(pattern);
+            return res.ToList();
+        }
 
         #endregion
 
@@ -1894,7 +2097,10 @@ namespace CSRedisDistributed
         /// </summary>
         /// <param name="channel"></param>
         /// <param name="handler"></param>
-        void SubScribe(string channel, Action<string> handler = null);
+        public void SubScribe(string channel, Action<string> handler = null)
+        {
+            RedisHelper.Subscribe((channel,msg=>handler.Invoke(msg.Body)));
+        }
 
         /// <summary>
         /// 用于将信息发送到指定分区节点的频道，最终消息发布格式：1|message
@@ -1902,7 +2108,10 @@ namespace CSRedisDistributed
         /// <param name="channel"></param>
         /// <param name="msg"></param>
         /// <returns></returns>
-        Task<long> PublishAsync(string channel, string msg);
+        public async Task<long> PublishAsync(string channel, string msg)
+        {
+            return await RedisHelper.PublishAsync(channel,msg);
+        }
 
         #endregion
 
