@@ -10,12 +10,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using ZSCreatorPlatform.Web.Admin.Extensions;
 
 namespace ZSCreatorPlatform.Web.Admin
 {
     public class Startup
     {
+
+        public IConfiguration _configuration;
+
+        public Startup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -23,6 +32,7 @@ namespace ZSCreatorPlatform.Web.Admin
             services.AddControllersWithViews();
 
             //认证\授权
+            #region 自定义cookie认证
             //认证
             services.AddAuthentication(options =>
             {
@@ -37,7 +47,7 @@ namespace ZSCreatorPlatform.Web.Admin
                  options.AccessDeniedPath = "/Account/AccessDenied";
                  options.SlidingExpiration = true;
                  options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-                 options.Cookie.Name = "zscreatorplatform";
+                 options.Cookie.Name = "ZSCreatorPlatform";
                  options.Cookie.HttpOnly = true;
              })
             .AddScheme<AuthenticationSchemeOptions, DefaultAuthenticationHandler>(nameof(DefaultAuthenticationHandler),null);
@@ -50,12 +60,25 @@ namespace ZSCreatorPlatform.Web.Admin
                     builder.Requirements.Add(new DefaultAuthorizationRequirement());
                 });
             });
-            services.AddScoped<IAuthorizationHandler, DefaultAuthorizationHandler>();
-
-
+            services.AddScoped<IAuthorizationHandler, DefaultAuthorizationHandler>(); 
+            #endregion
+            
             //缓存
+            //内存缓存
+            services.AddMemoryCache(options =>
+            {
+                options.ExpirationScanFrequency = TimeSpan.FromHours(3);//默认每三个小时检测缓存是否过期
+            });
 
-            //接口文档
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = _configuration.GetConnectionString("");
+                options.InstanceName = "";
+            });
+
+            services.AddCSRedisCache();
+
+            //接口文档swagger
 
             //跨域
 
@@ -83,8 +106,8 @@ namespace ZSCreatorPlatform.Web.Admin
 
             var defaultFilesOptions = new DefaultFilesOptions();
             defaultFilesOptions.DefaultFileNames.Clear();//index.htm index.html default.htm default.html
-            defaultFilesOptions.DefaultFileNames.Add("Index.html");
-            app.UseDefaultFiles();
+            defaultFilesOptions.DefaultFileNames.Add("login.html");
+            app.UseDefaultFiles(defaultFilesOptions);
      
             app.UseStaticFiles();
 

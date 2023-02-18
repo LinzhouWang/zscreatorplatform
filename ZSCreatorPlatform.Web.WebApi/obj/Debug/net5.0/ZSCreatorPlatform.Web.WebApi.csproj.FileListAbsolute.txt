@@ -38,7 +38,6 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.runtimeconfig.json
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.runtimeconfig.dev.json
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.dll
-G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ref\ZSCreatorPlatform.Web.WebApi.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.pdb
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\CSRedisCore.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\CSRedisDistributed.dll
@@ -84,7 +83,6 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.MvcApplicationPartsAssemblyInfo.cs
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.MvcApplicationPartsAssemblyInfo.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\staticwebassets\ZSCreatorPlatform.Web.WebApi.StaticWebAssets.Manifest.cache
-G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\staticwebassets\ZSCreatorPlatform.Web.WebApi.StaticWebAssets.xml
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\scopedcss\bundle\ZSCreatorPlatform.Web.WebApi.styles.css
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.RazorTargetAssemblyInfo.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.csproj.CopyComplete
@@ -105,3 +103,5 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.RazorTargetAssemblyInfo.cs
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.Views.pdb
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\bin\Debug\net5.0\ZSCreatorPlatform.Web.WebApi.StaticWebAssets.xml
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.Web.WebApi\obj\Debug\net5.0\refint\ZSCreatorPlatform.Web.WebApi.dll

@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="lib/jquery/1.9.1/jquery.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>calltest</title>
+</head>
+
+<body>
+    <div id="testEle">
+        <div>{{msg}}</div>
+        <div v-if="show">测试能否看见</div>
+        <ol>
+            <li v-for="item in emplist">
+                {{item.name}}-{{item.age}}
+            </li>
+        </ol>
+        <input name="phoneX" id="js-phoneX" type="text" value="16741510553" style="display:none;"/>
+        <input name="phoneA" id="js-phoneA" type="text" value="13673869278" placeholder="我的手机号"/>
+        <input name="phoneB" id="js-phoneB" type="text" value="" placeholder="客户手机号"/>
+        <input type="button" value="获取隐号" class="js-getphone"/>
+        <a style="width:200px;height:100px;" href="snssdk1128://openplatform/share?share_type=h5&client_key=awjbtm8ldp55scfi&nonce_str=DG04BHbBfYbSt5y1&timestamp=1668679383&signature=54cd716e7f8fe3ef2b3b459065d193bc&state=12898$$16840$$40850680$$1&video_path=http://mv.eeeff.com/video/2022/09/20/67c416e9305f48699104882837e60038.mp4&hashtag_list=[]&share_to_publish=1&title=测试抖音"> 测试跳转抖音</a>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+
+    //#region
+    let req, db;
+    let version = 6;
+    req = indexedDB.open('demo', version);
+    req.onerror = function (e) {
+        console.log('发生错误', e.target.errorCode);
+    }
+    // 成功
+    req.onsuccess = function (e) {
+        // 返回的是IDBDatabase数据库实例
+        db = e.target.result;
+        console.log("打开db成功" + db.name);
+
+        //添加数据
+        //let addNewsAtricle = db.transaction(['newsarticle'], 'readwrite')
+        //.objectStore('newsarticle').add({ id: 1, teamid: 1, partmentid: 1, userid: 1, title: '欢度国庆，祝福祖国！', content: '中华人民共和国万岁！毛主席万岁！', addtime: Date.now() });
+        //addNewsAtricle.onsuccess = function () { console.log('newsarticle表种写入数据成功！') };
+        //addNewsAtricle.onerror = function () { console.log('newsarticle表中写入数据失败！') };
+
+        //AddNewsArticle(1);
+        GetNewsArticlePageList();
+        /* 
+         * 处理错误事件：
+         * 错误事件是冒泡的。错误事件以生成错误的请求为目标，然后事件冒泡到事务中，最后到数据库对象。
+         * 如果要避免向每个请求添加错误处理程序，则可以在数据库对象上添加单个错误处理程序。
+         */
+        db.onerror = function (event) {
+            console.log("Database error:" + event.target.error.message);
+        }
+    }
+    //监听数据库升级
+    req.onupgradeneeded = function (e) {
+        db = e.target.result;
+
+        //创建表对象
+
+        //1.文章
+        let newsArticleStore;
+        if (!db.objectStoreNames.contains("newsarticle")) {
+            newsArticleStore = db.createObjectStore("newsarticle",
+                {
+                    keyPath: "id",
+                    autoIncrement:true
+                });
+        } else {
+            newsArticleStore = e.target.transaction.objectStore('newsarticle');
+        }
+        //创建索引     
+        if (!newsArticleStore.indexNames.contains('id')) {
+            newsArticleStore.createIndex("id", "id", { unique: true });
+        }
+        if (!newsArticleStore.indexNames.contains('title')) {
+            newsArticleStore.createIndex("title", "title", { unique: false });
+        }
+        if (!newsArticleStore.indexNames.contains('idAndTitle')) {
+            newsArticleStore.createIndex('idAndTitle', ['id', 'title'], { unique: false });
+        }
+
+
+    }
+
+    //添加文章
+    function AddNewsArticle(newsAtricleId) {
+        let newsArticleTransactionTemp = db.transaction(['newsarticle']);
+        let readNewsArticleObjStore = newsArticleTransactionTemp.objectStore('newsarticle');
+        let readReq = readNewsArticleObjStore.get(newsAtricleId);
+        readReq.onerror = function () { console.log('读取数据失败！') };
+        readReq.onsuccess = function () {
+            if (readReq.result) {
+                console.log('存在该记录----' + readReq.result.title + ',' + readReq.result.content);
+                return;
+            } else {
+                console.log('未获得数据记录------');
+                let addNewsAtricle = db.transaction(['newsarticle'], 'readwrite')
+                    .objectStore('newsarticle').add({ teamid: 1, partmentid: 1, userid: 1, title: '欢度国庆，祝福祖国！', content: '中华人民共和国万岁！毛主席万岁！', addtime: Date.now() });
+                addNewsAtricle.onsuccess = function (event) {
+                    console.log('newsarticle表种写入数据成功！' + event.target.result);
+                };
+                addNewsAtricle.onerror = function (event) {
+                    console.log('newsarticle表中写入数据失败！' + event.target.error.message);
+                };
+            }
+        };
+    }
+
+    //分页查询文章
+    //1.实现分页查询包含该条件下计数；
+    //2.可以多条件组合查询，但是不支持每个条件的灵活筛选，比如int类型查范围，字符串查包含等操作；
+    //3.是否满足模糊查询？（不支持，只能再返回的结果进行处理，所以不能应用于分页模糊查询）；
+    //4.实现多表联合查询？（不支持）；
+    //5.排序查询；
+    function GetNewsArticlePageList()
+    {
+        let page = 1, pageSize = 3, data = [];
+        let newsarticleTemp2 = db.transaction(['newsarticle'], 'readonly')
+            .objectStore('newsarticle');
+        let requeset = newsarticleTemp2
+            .index('idAndTitle')
+            .openCursor(IDBKeyRange.bound([3, '欢度国庆，祝福祖国！'], [4,'欢度国庆，祝福祖国！']));
+        let count = newsarticleTemp2.index('idAndTitle').count(IDBKeyRange.bound([3, '欢度国庆，祝福祖国！'], [4, '欢度国庆，祝福祖国！']));
+        let index = null;
+        requeset.onsuccess = function (event) {
+            let res = event.target.result;
+            if (res) {
+                if (index === pageSize - 1) {
+                    data.push(res.value);
+                    console.log('读取数据成功：', data);
+                    console.log('总条目', count.result);
+                    return;
+                }
+                if (index === null && page !== 1) {
+                    console.log('读取跳过：', (page - 1) * pageSize);
+                    index = 0;
+                    res.advance((page - 1) * pageSize);
+                } else {
+                    index++;
+                    data.push(res.value);
+                    res.continue();
+                }
+            } else {
+                console.log('读取数据成功：', data);
+                console.log('总条目', count.result);
+            }
+        }
+        requeset.onerror = function () {
+            console.log('读取数据失败');
+        }
+    }
+
+    //#endregion
+
+
+
+    new Vue({
+        el: "#testEle",
+        data: {
+            msg: "你好，hah",
+            show: true,
+            emplist: [
+                { name: "aa", age: 10 },
+                { name: "bb", age: 11 },
+                { name: "cc", age:10 }
+            ]
+        }
+    });
+
+    $(".js-getphone").click(function () {
+        var phoneA = $("#js-phoneA").val();
+        var phoneB = $("#js-phoneB").val();
+        var phoneX = $("#js-phoneX").val();
+        if (phoneA && phoneB && phoneX) {
+            BindAxbSystem(phoneA, phoneB, phoneX);
+        } else {
+            alert("请输入有效的手机号！");
+        }
+    })
+
+    function BindAxbSystem(phoneA,phoneB,phoneX)
+    {
+        var data =
+            {
+                CompanyId: -1008611,
+                PhoneNoA: phoneA,
+                PhoneNoX: phoneX,
+                PhoneNoB: phoneB,
+                StoreId: -1,
+                EmployeeId: 128999,
+                SourceType: 10,
+                SourceId: 128888,
+                SourceNumber:-1
+        };
+        var jsonData = JSON.stringify(data);
+        $.ajax({
+            type: "POST",
+            contentType:"application/json",
+            url: "http://vpcall.eeeff.com/api/VirtualPhoneApi/BindAxbSystem",
+            data: jsonData,
+            dataType: "json",
+            success:function(res) {
+                console.log(res);
+                if (res.errcode == 200) {
+                    alert("请拨打：" + res.data.SecretNo);
+                } else {
+                    alert("网络开小差了，请稍后重试！");
+                }
+            }
+        })
+    }
+
+</script>

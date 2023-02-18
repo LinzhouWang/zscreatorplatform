@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
 using ZSCreatorPlatform.Web.Admin.Models.Account;
 
 namespace ZSCreatorPlatform.Web.Admin.Controllers
@@ -16,9 +18,14 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
 
         #region Contors
 
-        public AccountController()
-        {
+        private readonly IMemoryCache _memoryCache;
 
+        private readonly IDistributedCache _distributedCache;
+        
+        public AccountController(IMemoryCache memoryCache,IDistributedCache distributedCache)
+        {
+            _memoryCache = memoryCache;
+            _distributedCache = distributedCache;
         }
         #endregion
 
@@ -52,7 +59,7 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
                 new Claim("role","admin"),
                 new Claim("roleid","001")
             };
-            var claimsIdentity = new ClaimsIdentity(claims);
+            var claimsIdentity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
             return new JsonResult(new { code=200,msg="登录成功"});
@@ -87,6 +94,28 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// 测试页
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Index()
+        {
+            string zscreator_val;
+            _memoryCache.TryGetValue("zscreator_key",out zscreator_val);
+            if (string.IsNullOrWhiteSpace(zscreator_val))
+            {
+                _memoryCache.GetOrCreate("zscreator_key", cacheEntry =>
+                {
+                    cacheEntry.SlidingExpiration = TimeSpan.FromMinutes(5);
+                    return DateTime.Now;
+                });    
+            }
+
+            _memoryCache.Set("zscreator_key",DateTime.Now.ToString(),TimeSpan.FromMinutes(5));
+            return Content("zscreator_memorycache_test");
+        }
+
 
         #endregion
 

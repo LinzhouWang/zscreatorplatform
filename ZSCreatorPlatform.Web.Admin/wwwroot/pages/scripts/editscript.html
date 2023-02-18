@@ -1,0 +1,297 @@
+<html>
+
+<head>
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <script type="text/javascript" src="../../lib/common.js?v=1.1"></script>
+    <link href="../../lib/codemirror/codemirror.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../lib/codemirror/codemirror.js"></script>
+    <script type="text/javascript" src="../../lib/codemirror/clike.js"></script>
+    <link href="../../lib/codemirror/foldgutter.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../lib/codemirror/foldcode.js"></script>
+    <script type="text/javascript" src="../../lib/codemirror/foldgutter.js"></script>
+    <script type="text/javascript" src="../../lib/codemirror/brace-fold.js"></script>
+    <script type="text/javascript" src="../../lib/codemirror/comment-fold.js"></script>
+    <script type="text/javascript" src="../../lib/codemirror/matchbrackets.js"></script>
+    <script type="text/javascript" src="../../lib/codemirror/javascript.js"></script>
+    <script type="text/javascript" src="../../lib/signalr/signalr.js"></script>
+    <!--<script type="text/javascript" src='../../lib/load.js'></script>-->
+    <style type="text/css">
+        .CodeMirror {
+            height: 100%;
+            font-family: monospace;
+        }
+
+        .CodeMirror-line {
+            padding-left: 30px;
+        }
+
+        .radio-box {
+            padding: 0
+        }
+
+        .layui-layer-btn {
+            text-align: center;
+        }
+
+        #debuginfo div {
+            padding-left: 20px;
+        }
+
+        #debuginfo {
+            height: 90%;
+        }
+
+        body .layer-ext-tip .layui-layer-content {
+            color: #fff;
+            background: #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="hidden" id="hidGuid">
+    <div class="page-container">
+        <div class="text-l">
+            <span class="pl-10">网站名称：</span>
+            <input type="text" name="" id="textWebName" placeholder="网站名称" style="width:120px" class="input-text size-M">
+            <span class="pl-10">间隔时间：</span>
+            <input type="text" name="" id="txtIntervalTime" style="width:30px" class="input-text size-M">
+            <button type="button" id="btnTest" class="btn btn-secondary radius">
+                <i class="Hui-iconfont">&#xe720;</i>测试
+            </button>
+            <button type="button" id="btnScriptEdit" class="btn btn-warning radius">
+                <i class="Hui-iconfont">&#xe632;</i>保存
+            </button>
+            <button type="button" id="btnSaveFrom" class="btn btn-danger radius">
+                <i class="Hui-iconfont">&#xe642;</i>插入到任务
+            </button>
+        </div>
+
+        <div class="col-sm-12 pt-10" style="height:94%">
+            <textarea class="" id='Content' style="display:none;"></textarea>
+        </div>
+    </div>
+    <div id="createWeb" style=" display:none;">
+        <div class="pt-10 text-c">
+            网站名称：
+            <input type="text" name="" id="tipWebname" placeholder="网站名称" style="width:150px" class="input-text size-M">
+        </div>
+        <div class="pt-20 text-c">
+            <a class="btn btn-primary radius size-L" onclick="check()">添加</a>
+        </div>
+    </div>
+    <div id="debuginfo" class=""></div>
+</body>
+</html>
+<script type="text/javascript">
+    var ceylonEditor;
+    var baseUrl = window.location.origin + "/";//"http://localhost:14393/";
+
+    function InitMirror() {
+        ceylonEditor = CodeMirror.fromTextArea(document.getElementById("Content"), {
+            lineNumbers: true,
+            matchBrackets: true,
+            mode: "javascript",
+            indentUnit: 4,
+            //代码折叠
+            lineWrapping: true,
+            smartIndent: true,
+            foldGutter: true,
+            gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            //括号匹配
+            matchBrackets: true
+            //智能提示
+            //extraKeys: {
+            //    "Ctrl": "autocomplete"
+            //}
+        });
+
+    }
+
+    var actionkey = GetQueryString('actionkey');
+    if (actionkey == 'add') {
+        $('#btnSave').show();
+        //先创建网站名称
+        layer.open({
+            type: 1,
+            area: ['30%', '20%'],
+            closeBtn: 0,
+            offset: '100px',
+            content: $('#createWeb') //这里content是一个DOM
+        });
+        InitMirror();
+    } else {
+        //规则编辑
+        var guid = GetQueryString('guid');
+        if (guid) {
+            $.getJSON(baseUrl + 'api/Scripts/GetWebScriptDto', {
+                guid: guid
+            }, function (msg) {
+                if (msg) {
+                    $('#hidGuid').val(msg.guid);
+                    $('#Content').val(msg.scriptContent);
+                    $('#textWebName').val(msg.webName);
+                    $('#txtIntervalTime').val(msg.interval);
+                    InitMirror();
+                } else {
+                    alert();
+                }
+            })
+        }
+    }
+
+
+
+    function seclcetCtiyCallback(msg) {
+        layer.closeAll(); //关闭窗口
+        if (msg) {
+            $('#hidScriptCity').val(msg);
+        } else {
+            layer.msg('您没有选择任何城市');
+        }
+    }
+
+    function check() {
+        var namevalue = $("#tipWebname").val();
+        if (!namevalue) {
+            layer.alert('网站名称必填');
+            return false;
+        } else {
+            layer.closeAll();
+            $('#textWebName').val(namevalue);
+            var data = {
+                WebName: namevalue,
+                IntervalTime: -1,
+                ScriptContent: ''
+            }
+            postJson('api/Scripts/AddWebScript', data, function (msg) {
+                if (msg.isSuccess == true) {
+                    $('#hidGuid').val(msg.message);
+                    layer.closeAll();
+                } else {
+                    layer.alert(msg.message);
+                }
+            })
+        }
+    }
+
+    //===============保存规则=================
+    function saveScript() {
+        if (!$('#textWebName').val()) {
+            return false;
+        }
+        var guid = $('#hidGuid').val();
+        var scriptContent = ceylonEditor.getValue();
+        var interval = $('#txtIntervalTime').val();
+        if (!interval) {
+            interval = 1;
+        }
+        postJson('api/Scripts/UpdateWebScript', {
+            Guid: guid,
+            WebName: $('#textWebName').val(),
+            Interval: interval,
+            ScriptContent: scriptContent,
+            IsRun: true,
+            IsDel: false
+        }, function (res) {
+            if (res.message == '更新成功') {
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 0, //不显示关闭按钮
+                    shade: [0],
+                    area: ['140px', '50px'],
+                    offset: 'rb', //右下角弹出
+                    time: 2000, //2秒后自动关闭
+                    anim: 2,
+                    skin: 'layer-ext-tip',
+                    content: '规则自动保存成功'
+                });
+            }
+        })
+    }
+    //===============保存规则 end=============
+
+    $('#btnScriptEdit').on('click', function () {
+        if (!$('#textWebName').val()) {
+            layer.msg('网站名称不能为空');
+            return false;
+        }
+        if (!$('#txtIntervalTime').val()) {
+            layer.msg('间隔时间不能为空');
+            return false;
+        }
+        var guid = $('#hidGuid').val();
+        var scriptContent = ceylonEditor.getValue();
+
+        postJson('api/Scripts/UpdateWebScript', {
+            Guid: guid,
+            WebName: $('#textWebName').val(),
+            Interval: $('#txtIntervalTime').val(),
+            ScriptContent: scriptContent,
+            IsRun: true,
+            IsDel: false
+        }, function (res) {
+            layer.msg(res.message);
+        })
+    })
+
+
+
+    $(function () {
+        //==========自动保存规则============
+
+        setInterval(function () {
+            if ($('#hidGuid').val()) {
+                saveScript();
+            }
+        }, 30000);
+        //==========自动保存规则 end=======
+
+        //============signalr==============
+        var connection = new signalR.HubConnectionBuilder().withUrl("/messageHub").build();
+        var connId = (new Date()).getTime() + "";
+        connection.start().then(function (e) {
+            console.log("连接成功！！！");
+        }).catch(function (err) {
+            console.log(err);
+        });
+        connection.on("ReceiveMessage", function (user, msg) {
+            console.log(user);
+            if (msg.toPic == "ScriptTest") {
+                $('#debuginfo').append('<div>' + msg.data + '</div>');
+            }
+        });
+        //============signalr end==========
+
+        //InitProvince('province');
+
+        //=============规则测试==============
+        $('#btnTest').on('click', function () {
+
+            $('#debuginfo').find("div").remove();
+            var index = layer.open({
+                type: 1,
+                title: "输出信息",
+                id: "LAY_layuipro",
+                resize: true,
+                area: ['900px', '80%'],
+                maxmin: true,
+                content: $('#debuginfo'),
+                end: function () {
+                    $('#debuginfo').find("div").remove();
+                }
+            });
+
+            postJson('api/Scripts/ScriptTest', {
+                ConnId: connId,
+                Content: ceylonEditor.getValue()
+            }, function (res) {
+                console.log(res);
+            })
+        });
+        //==============规则测试end===========
+
+    })
+</script>

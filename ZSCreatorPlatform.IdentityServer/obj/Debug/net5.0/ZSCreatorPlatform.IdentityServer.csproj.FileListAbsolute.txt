@@ -5,7 +5,6 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.runtimeconfig.json
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.runtimeconfig.dev.json
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.dll
-G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ref\ZSCreatorPlatform.IdentityServer.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.pdb
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.Views.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.Views.pdb
@@ -29,7 +28,6 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ZSCreatorPlatform.IdentityServer.RazorAssemblyInfo.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ZSCreatorPlatform.IdentityServer.RazorAssemblyInfo.cs
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\staticwebassets\ZSCreatorPlatform.IdentityServer.StaticWebAssets.Manifest.cache
-G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\staticwebassets\ZSCreatorPlatform.IdentityServer.StaticWebAssets.xml
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\scopedcss\bundle\ZSCreatorPlatform.IdentityServer.styles.css
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ZSCreatorPlatform.IdentityServer.TagHelpers.input.cache
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ZSCreatorPlatform.IdentityServer.TagHelpers.output.cache
@@ -49,3 +47,5 @@ G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平�
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ref\ZSCreatorPlatform.IdentityServer.dll
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ZSCreatorPlatform.IdentityServer.pdb
 G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\ZSCreatorPlatform.IdentityServer.genruntimeconfig.cache
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\bin\Debug\net5.0\ZSCreatorPlatform.IdentityServer.StaticWebAssets.xml
+G:\王林州\发发房项目\发发房微信号拓客\发发房文章创作平台\GitVersion\zscreatorplatform\ZSCreatorPlatform.IdentityServer\obj\Debug\net5.0\refint\ZSCreatorPlatform.IdentityServer.dll

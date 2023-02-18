@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.primitives\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Primitives.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.primitives\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Primitives.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.dependencyinjection.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.dependencyinjection.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.options\7.0.1\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Options.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.options\7.0.1\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Options.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Logging.Abstractions.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.dependencyinjection\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.dependencyinjection\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.caching.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Caching.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.caching.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Caching.Abstractions.targets')" />
+  </ImportGroup>
 </Project>

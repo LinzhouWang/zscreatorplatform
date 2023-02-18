@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5shiv.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="lib/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/detail.css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>资讯编辑</title>
+    <style>
+        .padding {
+            box-sizing: border-box;
+        }
+
+        .articleDetail {
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+            .articleDetail.cur {
+                opacity: 1;
+            }
+
+        .layuiTitle {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .layLi {
+            padding: 0px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .layLi:nth-child(1) {
+                border-right: 1px solid #eee;
+            }
+
+        .uploadPic {
+            width: 150px;
+            height: 100px;
+            border: 1px solid #eee;
+            display: inline-block;
+            object-fit: cover;
+            display: none;
+        }
+
+        .seeEdit {
+            position: relative;
+            height: 650px;
+            overflow-y: scroll;
+        }
+
+        .layui-btn {
+            background: #c81623;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="hidden" id="deleteImg"/>
+    <div class="articleDetail padding">
+        <div class="layui-row">
+            <div class="layui-col-md6 layLi padding">
+                <p class="layuiTitle">编辑区域</p>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">封面图</label>
+                        <div class="layui-input-block">
+                            <img class="uploadPic" />
+                            <button type="button" class="layui-btn " id="uploadImg">
+                                <i class="layui-icon">&#xe67c;</i>上传图片
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">资讯内容</label>
+                        <div class="layui-input-block">
+                            <textarea name="" id="edit">
+                               
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"></label>
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-event="getContent">预览</button>
+                            <button class="layui-btn" lay-event="getContentAndSave">预览并保存</button>
+                            <button class="layui-btn" lay-event="clearContent">清空内容</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="layui-col-md6 layLi padding">
+                <p class="layuiTitle">预览区域</p>
+                <div class="seeEdit">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/common.js"></script>
+<script type="text/javascript" src="lib/layui/layui.js"></script>
+<!--<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>-->
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qiniu-js/3.3.3/qiniu.min.js"></script>-->
+<!--<script type="text/javascript" src="lib/qiniu/qiniu.min.js"></script>-->
+<!--请在下方写此页面业务相关的脚本-->
+<!-- <script src="lib/layui_exts/tinymce/tinymce/tinymce.js"></script>-->
+<script type="text/javascript">
+    var layer;
+    var index;
+    var guid = '';//文章guid
+    var fromSource = '';//来源
+    var imgBaseUrl = "http://media.fafafang.com/";
+    var coverImg = "";//封面图
+
+    //上传封面图
+    layui.use('layer', function () {
+        layer = layui.layer;
+        index = layer.load();
+    });
+
+    layui.use('upload', function () {
+        var upload = layui.upload;
+        var uploadInst = upload.render({
+            elem: '#uploadImg',
+            url: baseUrl +"api/NewsArticle/UploadImgToQiNiu",
+            done: function (res) {
+                //上传完毕回调
+                console.log('res---' + JSON.stringify(res))
+                if (res && res.data) {
+                    $('.uploadPic').show();
+                    //同时删除上一张
+                    var deleteImg = $("#deleteImg").val();
+                    if (deleteImg) {
+                        DeleteImg(deleteImg, function ()
+                        {
+                            $('.uploadPic').attr('src', imgBaseUrl + `${res.data}`);
+                        });
+                    } else {
+                        $('.uploadPic').attr('src', imgBaseUrl + `${res.data}`);
+                    }
+                    coverImg = res.data;
+                }
+            },
+            error: function () {
+                //请求异常回调
+            }
+        });
+    });
+
+    layui.extend({
+        tinymce: 'lib/layui_exts/tinymce/tinymce'
+    }).use(['tinymce', 'util', 'layer'], function () {
+        var t = layui.tinymce
+            , util = layui.util
+            , layer = layui.layer
+            , $ = layui.$
+
+        var edit = t.init({
+            elem: "#edit",
+            height: 500,
+            menubar: 'edit insert  format table',
+            plugins: 'image',
+            images_upload_handler: function (blobInfo, succFun, failFun) {
+                uploadImg(blobInfo.blob(), function (res) {
+                    if (res) {
+                        var imgBase = `http://media.fafafang.com/${res}`;
+                        succFun(imgBase);
+                    }
+                })
+            },
+
+        }, function (opt, edit) {
+            //加载完成后回调
+            guid = GetQueryString('guid');
+            fromSource = GetQueryString('from');
+            console.log('url---' + guid);
+            console.log('fromSource---' + fromSource);
+            $('.articleDetail').addClass('cur');
+            fromSource == 'edit' ? getDetail(function (res) {
+                layer.close(index);
+                if (res) {
+                    t.get('#edit').setContent(res.content);
+                    $('.layui-input').val(res.title);                 
+                    if (res.coverImg) {
+                        $('.uploadPic').show();
+                        $('.uploadPic').attr('src', imgBaseUrl + res.coverImg);
+                        coverImg = res.coverImg;
+                    }
+
+                }
+            }) : layer.close(index)
+        });
+
+        util.event('lay-event', {
+            /*获得内容*/
+            getContent: function () {
+                var content = t.get('#edit').getContent()
+                var title = $('.layui-input').val();
+                $('.seeEdit').html(`<h2>${title}</h2>${content}`);
+            },
+            /*获得并保存内容*/
+            getContentAndSave: function () {
+                var $thisLoading = layer.msg('加载中...', {
+                    icon: 16
+                    , shade: 0.3
+                    , time: false
+                });
+                var content = t.get('#edit').getContent()
+                var title = $('.layui-input').val();
+                $('.seeEdit').html(`<h2>${title}</h2>${content}`);
+                var data = {
+                    Guid: guid,
+                    Title: title,
+                    Content: content,
+                    CoverImg: coverImg
+                }
+                postJson('api/NewsArticle/UpdateNewsArticle', data, function (res) {
+                    if (res.errCode == 200) {
+                        layer.close($thisLoading);
+                        layer.open({
+                            title: '恭喜',
+                            content: '保存成功！'
+                        });
+                    } else {
+                        layer.close($thisLoading);
+                        layer.alert(res.errMsg);
+                    }
+                })
+            },
+            /*清空内容*/
+            clearContent: function () {
+                t.get('#edit').setContent('');
+
+                //$('.uploadPic').hide();
+                //$('.uploadPic').attr('src', '');
+                //$('.layui-input').val('');
+            },
+
+        });
+
+    })
+
+    //加载咨询内容
+    function getDetail(callback) {
+        $.ajax({
+            url: baseUrl + 'api/NewsArticle/GetNewsArticleDtoExt?search=&guid=' + guid,
+            success: function (res) {
+                console.log('获取到的内容---' + JSON.stringify(res))
+                callback && res.errCode == 200 && res.data && callback(res.data)
+                //t.get('#edit').setContent(res.data.content)
+            }
+        })
+    }
+
+    //上传图片
+    function uploadImg(file, callback) {
+        var xhr, formData;
+        xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+        xhr.open('POST', baseUrl +"api/NewsArticle/UploadImgToQiNiu");
+        xhr.onload = function () {
+            var json;
+            if (xhr.status == 200) {
+                json = JSON.parse(xhr.responseText);
+                json && json.data && callback && callback(json.data)
+                console.log('json---' + JSON.stringify(json));
+            }
+        };
+        formData = new FormData();
+        formData.append('file', file, file.name);//此处与源文档不一样
+        xhr.send(formData);
+    }
+
+    //删除指定图片
+    function DeleteImg(imgurl,callback) {
+        var $thisLoading = layer.msg('加载中...', {
+            icon: 16
+            , shade: 0.3
+            , time: false
+        });
+        $.get(baseUrl + "api/NewsArticle/DeleteImg?imgUrl=" + imgUrl, function (res) {
+            if (res.errCode==200) {
+                layer.close($thisLoading);
+                layer.open({
+                    title: '恭喜',
+                    content: '保存成功！'
+                });
+                if (callback) {
+                    callback();
+                }
+            }
+            else {
+                layer.close($thisLoading);
+                layer.alert(res.errMsg);
+            }
+        })
+    }
+
+    //上传图片到七牛（暂时废弃）
+    function UpImgToQiNiu(file) {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDay();
+        var guid = date.getTime();
+        var fileKey = "wxaccount/articleimg/" + openid + "/" + articleid + "/" + year + "/" + month + "/" +
+            day + "/" + guid;
+        var ext = ".jpg";
+        var key = fileKey + ext;
+        GetUploadToken(function (res) {
+            var observable = qiniu.upload(file, key, res, "", "");
+            var subscription = observable.subscribe(observer); // 上传开始
+            console.log(observable);
+            console.log(subscription);
+        });
+
+    }
+
+    //得到上传token（暂时废弃）
+    function GetUploadToken(callback) {
+        var requestUrl = baseUrl + "api/NewsArticle/GetUploadToken";
+        $.get(requestUrl, function (res) {
+            if (res.errCode == 200) {
+                var token = res.data;
+
+                if (callback) {
+                    callback(res.data)
+                }
+            } else {
+                layer.open({
+                    title: '温馨提示',
+                    content: res.errMsg
+                });
+            }
+
+        })
+
+    }
+
+</script>

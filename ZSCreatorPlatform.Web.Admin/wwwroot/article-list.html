@@ -1,0 +1,541 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="lib/html5shiv.js"></script>
+	<script type="text/javascript" src="lib/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+	<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+	<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+	<!--[if IE 6]>
+	<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+	<script>DD_belatedPNG.fix('*');</script>
+	<![endif]-->
+	<title>资讯列表</title>
+</head>
+<body>
+	<nav class="breadcrumb">
+		<i class="Hui-iconfont">&#xe67f;</i>
+		首页
+		<span class="c-gray en">&gt;</span>
+		爆文管理
+		<span class="c-gray en">&gt;</span>
+		爆文列表
+		<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+	</nav>
+	<div class="page-container">
+		<div class="text-c">
+			<button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
+			<span class="select-box inline">
+				<select name="" class="select" id="select">
+					<option value="-1">全部来源</option>
+					<option value="1">网易新闻</option>
+					<option value="2">今日头条</option>
+					<option value="3">微信公众号</option>
+				</select>
+			</span>
+			采集日期：<input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d-%H-%m\'}' })" id="logmin" class="input-text Wdate" style="width:120px;" />
+			-
+			<input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d-%H-%m' })" id="logmax" class="input-text Wdate" style="width:120px;" />
+			<input type="text" id="search" placeholder=" 资讯名称" style="width:250px" class="input-text" />
+			<button id="begionSearchBtn" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜爆文</button>
+		</div>
+		<div class="cl pd-5 bg-1 bk-gray mt-20">
+			<span class="l">
+				<!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius">
+					<i class="Hui-iconfont">&#xe6e2;</i> 批量删除
+				</a>-->
+				<a class="btn btn-primary radius" data-title="添加爆文" data-href="article-add.html?v=1.3" onclick="Hui_admin_tab(this)" href="javascript:;">
+					<i class="Hui-iconfont">&#xe600;</i> 添加爆文
+				</a>
+			</span> <span class="r">共有数据：<strong id="tatalData"></strong> 条，<strong id="tatalPageNumber"></strong> 页，当前第<strong id="nowPageNumber"></strong> 页</span>
+		</div>
+
+		<div class="mt-20">
+			<table class="table table-border table-bordered table-bg table-hover  table-responsive">
+				<thead>
+					<tr class="text-c">
+						<th width="25"><input type="checkbox" name="" value="" /></th>
+						<!--<th width="80">ID</th>-->
+						<th width="180">标题</th>
+						<th width="70">来源</th>
+						<th width="70">归属</th>
+						<th width="120">采集时间</th>
+						<th width="50">审核状态</th>
+						<th width="50">发布状态</th>
+						<th width="60">虚拟阅读量</th>
+						<th width="140">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div style="float:right"><a style="margin-right:5px;" class="firstpage">第一页</a><a style="margin-right: 5px;" class="previouspage">上一页</a><span></span><a style="margin-right: 5px;" class="nextpage">下一页</a><a class="lastpage">最后一页</a></div>
+		</div>
+	</div>
+	<!--定时推送模板-->
+	<div id="tuisongLayer" class="row" style="width: 420px;margin-left:7px; margin-top:10px;display:none">
+		<div class="col-sm-12">
+			<div class="input-group">
+				<span class="input-group-addon"> 推送时间:</span>
+				<input type="text" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss' })" id="tuisong_time" class="input-text Wdate" style="width:175px;" />
+			</div>
+		</div>
+	</div>
+	<!--虚拟阅读量模板-->
+	<div id="virtualReadingLayer" class="row" style="width: 420px;margin-left:7px; margin-top:10px;display:none">
+		<div class="col-sm-12">
+			<div class="input-group">
+				<span class="input-group-addon"> 虚拟阅读量:</span>
+				<input type="text" id="virtualReadingCount" required value="0" lay-verify="number" placeholder="请输入阅读量" autocomplete="off" class="layui-input" style="width:175px;" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="lib/datatables/1.10.15/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    var baseUrl = window.location.origin + "/";//"http://localhost:14393/";
+	var pageIndex = 1;
+	var pageSize = 15;
+	var pageNumberTotal = 0;
+	$('.table-sort').dataTable({
+		"aaSorting": [[1, "desc"]],//默认第几个排序
+		"bStateSave": true,//状态保存
+		"pading": false,
+		"pagingType": "full_numbers",
+		"aoColumnDefs": [
+			//{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+			{ "orderable": false, "aTargets": [0, 7] }// 不参与排序的列
+		]
+	});
+
+	/*资讯-编辑*/
+	function article_edit(title, url, id, w, h) {
+		var index = layer.open({
+			type: 2,
+			title: title,
+			content: url
+		});
+		layer.full(index);
+	}
+
+
+	/*资讯-列表*/
+	function article_list(search, type, state, isshowed, belongtype, cjdatemin, cjdatemax, pageindex, pagesize) {
+		var $thisLoading = layer.msg('加载中...', {
+			icon: 16
+			, shade: 0.3
+			, time: false
+		});
+		var articleListUrl = baseUrl + "api/NewsArticle/GetNewsArticleDtoPageList";
+		var requestUrl = articleListUrl + "?search=" + search + "&type=" + type + "&state=" + state + "&isshowed=" + isshowed + "&belongtype=" + belongtype
+			+ "&cjdatemin=" + cjdatemin + "&cjdatemax=" + cjdatemax + "&pageIndex=" + pageindex + "&pageSize=" + pagesize + "&isTotal=true&isDesc=true";
+		$.get(requestUrl, function (res) {
+			layer.close($thisLoading);
+			if (res.errCode == 200) {
+				console.log(res.data);
+				var dataList = res.data.dataList;
+				$("#tatalData").text(res.data.totalCount);
+				$("#tatalPageNumber").text(res.data.totalPageCount);
+				$("#nowPageNumber").text(pageindex);
+				pageNumberTotal = res.data.totalPageCount;
+				var content = "";
+				for (var i = 0; i < dataList.length; i++) {
+					var typename = "";
+					if (dataList[i].type == 1) {
+						typename = "网易新闻";
+					} else if (dataList[i].type == 2) {
+						typename = "今日头条";
+					} else {
+						typename = "微信公众号";
+					}
+
+					var belongname = "";
+					if (dataList[i].belongType == 1) {
+						belongname = "系统采集";
+					} else {
+						belongname = "个人采集";
+					}
+
+					var statename = "";
+					if (dataList[i].state == 0) {
+						statename = "待审核";
+					}
+					else if (dataList[i].state == 1) {
+						statename = "审核通过";
+					}
+					else {
+						statename = "审核未通过";
+					}
+
+					var fabuname = "";
+					if (dataList[i].isShowed == 1) {
+						fabuname = "已推送";
+					} else {
+						fabuname = "待推送";
+					}
+
+					console.log("采集时间：" + dataList[i].operateTime);
+
+					var time = dataList[i].operateTime.replace("T", " ").split('.')[0];
+
+					content += `<tr class='text-c'><td><input type='checkbox' value='' name=''/></td>
+						<td class='text-l'>
+						<a  class='text-primary' data-href='article-detail.html?guid=${dataList[i].guid}&from=edit'  onclick="Hui_admin_tab(this)" data-title="编辑" title="点击编辑"  href="javascript:void(0)" style="cursor:pointer">${dataList[i].title}</a>
+						</td>
+						<td><a href='${dataList[i].url}' target='view_window'>${typename}</a></td>
+						<td>${belongname}</td>
+						<td>${time}</td>
+						<td class='shenhestate'>${statename}</td>
+						<td class='td-status'><span class='label label-success radius' class='tuisongstate'>${fabuname}</span></td>
+						<td class='virtual_reading'>${dataList[i].virtualReadingCount}</td>
+						<td class='f-14 td-manage'>
+						<a style='text-decoration:none' href='javascript:;' title='审核' class='btnShenHe' d-guid='${dataList[i].guid}'>审核</a>
+						<a style = 'text-decoration:none'  href = 'javascript:;' title = '推送'  class='btnTuiSong' d-guid='${dataList[i].guid}'>立即推送</a >
+						<a style = 'text-decoration:none'  href = 'javascript:;' title = '定时推送'  class='btnTuiSongLater' d-guid='${dataList[i].guid}'> 定时推送</a >
+						<a style = 'text-decoration:none'  href = 'javascript:;' title = '虚拟阅读量'  class='btnVirtualReading' d-guid='${dataList[i].guid}'> 虚拟阅读量</a>
+						<a style='text-decoration:none' class='ml-5' data-href='article-detail.html?guid=${dataList[i].guid}&from=edit' onclick='Hui_admin_tab(this)' href='javascript:;' data-title="编辑" title='点击编辑'><i class='Hui-iconfont'>&#xe6df;</i></a>
+						<a style='text-decoration:none' class='ml-5 btnDelete' href='javascript:;' title='删除' d-guid='${dataList[i].guid}'><i class='Hui-iconfont'>&#xe6e2;</i></a>
+						</td></tr>`
+				}
+				$("tbody").html(content);
+			} else {
+				layer.open({
+					title: '温馨提示',
+					content: res.errMsg,
+                    end: resultCallback
+				});
+			}
+		});
+	}
+
+
+
+	function resultCallback()
+	{
+		if (window.top != window.self) {
+			window.top.location.href = baseUrl;
+        } else {
+            window.location.href = baseUrl;
+        }
+	}
+
+	//审核，通过或者不通过
+	$("tbody").on("click", ".btnShenHe", function () {
+		var $this = $(this);
+		var guid = $this.attr("d-guid");
+		layer.confirm('审核文章', {
+			btn: ['通过', '不通过', '取消'],
+			shade: false,
+			closeBtn: 0
+		},
+			function () {
+				var $thisLoading = layer.msg('审核中...', {
+					icon: 16
+					, shade: 0.3
+					, time: false
+				});
+				ChangeNewsArticleState(guid, 1, function (res) {
+					if (res == 1) {//代表审核通过
+						var sNode = $this.parents("tr").find(".shenhestate");
+						sNode.html("审核通过");
+					}
+					layer.close($thisLoading);
+				});
+				//layer.msg('已发布', { icon: 6, time: 1000 });
+			},
+			function () {
+				var $thisLoading = layer.msg('审核中...', {
+					icon: 16
+					, shade: 0.3
+					, time: false
+				});
+				ChangeNewsArticleState(guid, 2, function (res) {
+					if (res == 2) {//代表审核通过
+						var rNode = $this.parents("tr").find(".shenhestate");
+						rNode.html("审核不通过");
+					}
+					layer.close($thisLoading);
+				});
+				//layer.msg('未通过', { icon: 5, time: 1000 });
+			});
+	})
+
+	//推送
+	$("tbody").on("click", ".btnTuiSong", function () {
+		var $this = $(this);
+		var guid = $this.attr("d-guid");
+		layer.confirm('确认要立即推送吗？', function (index) {
+			var $thisLoading = layer.msg('推送中...', {
+				icon: 16
+				, shade: 0.3
+				, time: false
+			});
+			ShowNewsArticle(guid, function () {
+				layer.close($thisLoading);
+				$this.parents("tr").find(".tuisongstate").html("已推送");
+			});
+		});
+	})
+
+	//定时推送
+	$("tbody").on("click", ".btnTuiSongLater", function () {
+		var $this = $(this);
+		var guid = $this.attr("d-guid");
+		layer.open({
+			id: 1,
+			type: 1,
+			title: '定时发送',
+			skin: 'layui-layer-rim',
+			area: ['450px', 'auto'],
+			content: $('#tuisongLayer'),
+			//'<div class="row" style="width: 420px; margin-left:7px; margin-top:10px;">'
+			//+'<div class="col-sm-12">'
+			//+ '<div class="input-group">'
+			//+ '<span class="input-group-addon"> 推送时间:</span>'
+			//+ '<input id="tuisong_time" type="text" class="form-control" placeholder="请输入推送时间"/>'
+			//+ '</div>'
+			//+ '</div>'
+			//+ '<div class="col-sm-12" style="margin-top: 10px">'
+			//+ '<div class="input-group">'
+			//+ '<span class="input-group-addon">出账时间:</span>'
+			//+ '<input id="recent_time" type="text" class="form-control" placeholder="请输入出账时间">'
+			//+ '</div>'
+			//+ '</div>'
+			//+ '</div>'
+			//,
+			btn: ['确定', '取消'],
+			btn1: function (index, layero) {
+				layer.close(index);
+				var $thisLoading = layer.msg('推送中...', {
+					icon: 16
+					, shade: 0.3
+					, time: false
+				});
+				var tuisongTime = $('#tuisong_time').val();//推送时间
+				var requestUrl = baseUrl + "api/Tasks/AddArticleScheduleBackgroundJob?guid=" + guid + "&begiontime=" + tuisongTime;
+				$.get(requestUrl, function (res) {
+					if (res.errCode == 200) {
+						layer.open({
+							title: '恭喜',
+							content: '添加定时推送成功！'
+						});
+					} else {
+						layer.open({
+							title: '温馨提示',
+							content: res.errMsg
+						});
+					}
+					layer.close($thisLoading);
+				});
+			},
+			btn2: function (index, layero) {
+				layer.close(index);
+			}
+
+		});
+	})
+
+    //虚拟阅读量
+    $("tbody").on("click", ".btnVirtualReading", function () {
+        var $this = $(this);
+        var guid = $this.attr("d-guid");
+        layer.open({
+            id: 1,
+            type: 1,
+            title: '设置虚拟阅读量',
+            skin: 'layui-layer-rim',
+            area: ['450px', 'auto'],
+            content: $('#virtualReadingLayer'),
+            btn: ['确定', '取消'],
+            btn1: function (index, layero) {
+                layer.close(index);
+                var $thisLoading = layer.msg('设置中...', {
+                    icon: 16
+                    , shade: 0.3
+                    , time: false
+                });
+                var virtualReadingCount = $('#virtualReadingCount').val();//虚拟阅读量
+
+                var requestUrl = baseUrl + "api/NewsArticle/UpdateNewsArticleVirtualReading?guid=" + guid + "&virtualReadingCount=" + virtualReadingCount;
+                $.get(requestUrl, function (res) {
+                    if (res.errCode == 200) {
+                        layer.open({
+                            title: '恭喜',
+                            content: '设置成功！'
+						});
+                        $this.parents("tr").find(".virtual_reading").html(virtualReadingCount);
+                    } else {
+                        layer.open({
+                            title: '温馨提示',
+                            content: res.errMsg
+                        });
+                    }
+					layer.close($thisLoading);
+                    $('#virtualReadingCount').val(0);
+                });
+            },
+            btn2: function (index, layero) {
+                layer.close(index);
+            }
+
+        });
+    })
+
+	//删除
+	$("tbody").on("click", ".btnDelete", function () {
+        var $thisLoading = layer.msg('删除中...', {
+            icon: 16
+            , shade: 0.3
+            , time: false
+        });
+		var $this = $(this);
+		var guid = $this.attr("d-guid");
+		layer.confirm('确认要删除吗？', function (index) {
+            $.get(baseUrl + "api/NewsArticle/DeleteNewsArticle?nguid=" + guid, function (res) {
+                if (res.errCode == 200) {
+                    layer.open({
+                        title: '恭喜',
+                        content: "删除成功！"
+                    });
+                } else {
+                    layer.open({
+                        title: '温馨提示',
+						content: res.errMsg,
+						end: resultCallback
+                    });
+				}
+				layer.close($thisLoading);
+				$this.parents("tr").remove();
+			});
+		});
+	})
+
+
+	//审核通过爆文资讯方法
+	function ChangeNewsArticleState(guid, state, callback) {
+		$.get(baseUrl + "api/NewsArticle/ChangeNewsArticleState?guid=" + guid + "&state=" + state, function (res) {
+			if (res.errCode == 200) {
+				if (state == 1) {
+					layer.open({
+						title: '恭喜',
+						content: "审核通过，设置成功！"
+					});
+				} else {
+					layer.open({
+						title: '恭喜',
+						content: "审核不通过，设置成功！"
+					});
+				}
+				if (callback != null) {
+					callback(state);
+				}
+			} else {
+				layer.open({
+					title: '温馨提示',
+					content: res.errMsg,
+                    end: resultCallback
+				});
+				if (callback != null) {
+					callback(-1);
+				}
+			}
+		})
+	}
+
+	//推送爆文资讯方法
+	function ShowNewsArticle(guid, callback) {
+		$.get(baseUrl + "api/NewsArticle/ShowNewsArticle?guid=" + guid + "&isshowed=true", function (res) {
+			if (res.errCode == 200) {
+				layer.open({
+					title: '恭喜',
+					content: "推送成功！"
+				});
+				if (callback != null) {
+					callback();
+				}
+			}
+			else {
+				layer.open({
+					title: '温馨提示',
+					content: res.errMsg,
+                    end: resultCallback
+				});
+			}
+
+		});
+	}
+
+	//筛选公共方法
+	function SearchNewsCommon() {
+		var ntype = $("#select").val();
+		var mintime = $("#logmin").val();
+		var maxtime = $("#logmax").val();
+		var stitle = $("#search").val();
+		//(search, type, state, isshowed, belongtype, cjdatemin, cjdatemax,pageindex,pagesize)
+		article_list(stitle, ntype, -1, -1, 1, mintime, maxtime, pageIndex, pageSize);
+	}
+
+	//搜索资讯
+	$("#begionSearchBtn").click(function () {
+		pageIndex = 1;
+		SearchNewsCommon();
+	})
+
+	//选择页码事件
+	//第一页
+	$(".firstpage").click(function () {
+		pageIndex = 1;
+		SearchNewsCommon();
+	});
+	//tatalData
+	//上一页
+	$(".previouspage").click(function () {
+		if (pageIndex > 1) {
+			pageIndex = pageIndex - 1;
+			SearchNewsCommon();
+		}
+	});
+	//下一页
+	$(".nextpage").click(function () {
+		console.log("pageNumberTotal:" + pageNumberTotal);
+		if (pageIndex < pageNumberTotal) {
+			pageIndex = pageIndex + 1;
+			SearchNewsCommon();
+		}
+	});
+	//最后一页
+	$(".lastpage").click(function () {
+		pageIndex = pageNumberTotal;
+		SearchNewsCommon();
+	});
+
+	$(function () {
+		//初始化页面配置
+		pageIndex = 1;
+		pageSize = 15;
+		pageNumberTotal = 0;
+		//初次加载爆文资讯列表
+		article_list("", -1, -1, -1, 1, "", "", 1, pageSize);
+
+	})
+
+</script>

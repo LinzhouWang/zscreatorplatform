@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>规则列表</title>
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <script type="text/javascript" src="../../lib/common.js?v=1.1"></script>
+    <script type="text/javascript" src="../../lib/bootstraptable/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstraptable/bootstrap-table-zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../lib/pager.js?v=1.3"></script>
+    <!--<script type="text/javascript" src="../../lib/load.js"></script>-->
+
+    <link rel="stylesheet" href="../../lib/bootstraptable/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../lib/bootstraptable/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div id="toolbar" class="text-l pb-10">
+            <span class="pl-10">网站名称：</span>
+            <input type="text" name="" id="textWebName" placeholder="网站名称" style="width:150px" class="input-text size-M">
+            <a class="btn btn-success radius" id="btnSearch">
+                <i class="Hui-iconfont">&#xe665;</i>搜索
+            </a>
+            <a class="btn btn-danger radius" id="btnDel">
+                <i class="Hui-iconfont">&#xe6e2;</i>删除
+            </a>
+            <a class="btn btn-warning radius" id="btnAddTasks">
+                <i class="Hui-iconfont">&#xe642;</i>添加到任务
+            </a>
+        </div>
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" id="btnRefresh" title="刷新">
+            <i class="Hui-iconfont"></i>
+        </a>
+        <table id="scripttable"></table>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var $table;
+    $(function () {
+        //删除（删除通用规则将会删除其对应的网站的城市代码，请谨慎操作）
+        $('#btnDel').on('click', function () {
+            var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.Guid;
+            });
+            if (ids) {
+                //询问框
+                var index = layer.confirm('确定要删除吗？', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+                    layer.close(index);
+                    postJson('api/script/scriptdel', {
+                        Ids: ids
+                    }, function (msg) {
+                        if (msg.Success) {
+                            $table.bootstrapTable('remove', {
+                                field: 'Guid',
+                                values: ids
+                            });
+                            layer.msg('删除成功');
+                        } else {
+                            layer.msg('删除失败');
+                        }
+                    })
+                }, function () {
+
+                });
+
+            }
+        });
+        //删除结束
+
+        //添加到任务中心
+        $('#btnAddTasks').on('click', function () {
+            var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.Guid;
+            });
+            if (ids.length > 0) {
+                //询问框
+                var index = layer.confirm('您确定要添加任务吗？', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+                    layer.close(index);
+                    //loading层
+                    var loadindex = layer.load(0, {
+                        shade: false
+                    });
+                    postJson('api/plantask/addtotask', {
+                        ids: ids
+                    }, function (msg) {
+                        layer.close(loadindex);
+                        layer.alert(msg.Message);
+                    })
+                });
+            } else {
+                layer.msg('您貌似没有选中任何脚本');
+            }
+        })
+        //end
+    })
+</script>
