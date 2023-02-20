@@ -22,11 +22,17 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
 
         private readonly IDistributedCache _distributedCache;
         
-        public AccountController(IMemoryCache memoryCache,IDistributedCache distributedCache)
+        public AccountController(IMemoryCache memoryCache)
         {
             _memoryCache = memoryCache;
-            _distributedCache = distributedCache;
         }
+        
+        // public AccountController(IMemoryCache memoryCache,IDistributedCache distributedCache)
+        // {
+        //     _memoryCache = memoryCache;
+        //     _distributedCache = distributedCache;
+        // }
+        
         #endregion
 
 
@@ -101,6 +107,9 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
         /// <returns></returns>
         public IActionResult Index()
         {
+
+            #region memorycache
+
             string zscreator_val;
             _memoryCache.TryGetValue("zscreator_key",out zscreator_val);
             if (string.IsNullOrWhiteSpace(zscreator_val))
@@ -113,6 +122,17 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
             }
 
             _memoryCache.Set("zscreator_key",DateTime.Now.ToString(),TimeSpan.FromMinutes(5));
+            
+
+            #endregion
+
+            #region distributedcache
+            //_distributedCache.SetString();
+            RedisHelper.HSet("zscreatorplatform","key_center","哈哈哈哈");
+            
+            #endregion
+            
+            
             return Content("zscreator_memorycache_test");
         }
 

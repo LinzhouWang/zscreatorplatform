@@ -10,7 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CSRedis;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Configuration;
+using Microsoft.OpenApi.Models;
 using ZSCreatorPlatform.Web.Admin.Extensions;
 
 namespace ZSCreatorPlatform.Web.Admin
@@ -29,6 +33,32 @@ namespace ZSCreatorPlatform.Web.Admin
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //接口文档swagger
+            #region swageger
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("zscreatorplatform",new OpenApiInfo()
+                {
+                    Title = _configuration["Swagger:Title"],
+                    Description = _configuration["Swagger:Description"],
+                    Version = "v"+_configuration["Swagger:Version"],
+                    Contact = new OpenApiContact()
+                    {
+                        Name = _configuration["Swagger:Name"],
+                        Email = _configuration["Swagger:Email"],
+                        Url = new Uri(_configuration["Swagger:Url"])
+                    },
+                    License = new OpenApiLicense()
+                    {
+                        Name = _configuration["Swagger:Name"],
+                        Url = new Uri(_configuration["Swagger:Url"])
+                    }
+                });                
+            });
+
+            #endregion
+            
             services.AddControllersWithViews();
 
             //认证\授权
@@ -64,21 +94,43 @@ namespace ZSCreatorPlatform.Web.Admin
             #endregion
             
             //缓存
+            #region 内存缓存
+
             //内存缓存
             services.AddMemoryCache(options =>
             {
                 options.ExpirationScanFrequency = TimeSpan.FromHours(3);//默认每三个小时检测缓存是否过期
             });
 
-            services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = _configuration.GetConnectionString("");
-                options.InstanceName = "";
-            });
+            //同步timeout 异常正常
+            // services.AddStackExchangeRedisCache(options =>
+            // {
+            //     options.Configuration = _configuration.GetConnectionString("");
+            //     options.InstanceName = "";
+            // });
 
-            services.AddCSRedisCache();
+            //自定义扩展，关于连接释放那块儿需要再测试
+            // services.AddCSRedisCache(options =>
+            // {
+            //     
+            // });
+            
+            //分布式缓存
+            //单例
+            var csredis = new CSRedisClient(_configuration.GetSection("RedisConnectionStrings")["Defalut"]);
+            //services.AddSingleton<IDistributedCache>(new Microsoft.Extensions.Caching.Redis.CSRedisCache(csredis));
+            
+            RedisHelper.Initialization(csredis);//也可以基于RedisHelper再封装成distributedcache
+            //集群
+            // var csredisClustor = new CSRedisClient(null,
+            //     "127.0.0.1:6371,password=123,defaultDatabase=11,poolsize=10,ssl=false,writeBuffer=10240,prefix=key前辍", 
+            //     "127.0.0.1:6372,password=123,defaultDatabase=12,poolsize=11,ssl=false,writeBuffer=10240,prefix=key前辍",
+            //     "127.0.0.1:6373,password=123,defaultDatabase=13,poolsize=12,ssl=false,writeBuffer=10240,prefix=key前辍",
+            //     "127.0.0.1:6374,password=123,defaultDatabase=14,poolsize=13,ssl=false,writeBuffer=10240,prefix=key前辍"
+            // );
+            // services.AddSingleton<IDistributedCache>(new Microsoft.Extensions.Caching.Redis.CSRedisCache(csredisClustor));
 
-            //接口文档swagger
+            #endregion
 
             //跨域
 
@@ -102,6 +154,12 @@ namespace ZSCreatorPlatform.Web.Admin
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("","");
+                });
             }
 
             var defaultFilesOptions = new DefaultFilesOptions();

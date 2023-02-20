@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[3.8.670, )"
             },
+            "Caching.CSRedis": {
+              "target": "Package",
+              "version": "[3.8.670, )"
+            },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
               "version": "[7.0.3, )"
@@ -58,6 +62,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
