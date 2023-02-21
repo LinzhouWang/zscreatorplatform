@@ -13,6 +13,9 @@ using ZSCreatorPlatform.Web.Admin.Models.Account;
 
 namespace ZSCreatorPlatform.Web.Admin.Controllers
 {
+    /// <summary>
+    /// 账户控制器
+    /// </summary>
     public class AccountController : Controller
     {
 
@@ -22,6 +25,10 @@ namespace ZSCreatorPlatform.Web.Admin.Controllers
 
         private readonly IDistributedCache _distributedCache;
         
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="memoryCache"></param>
         public AccountController(IMemoryCache memoryCache)
         {
             _memoryCache = memoryCache;

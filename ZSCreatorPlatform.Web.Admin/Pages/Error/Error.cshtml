@@ -1,0 +1,19 @@
+@model Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>这个是错误页标题</title>
+</head>
+<body>
+<div>
+    这个是错误页内容
+    <h3>@Model.Error.Message</h3>
+</div>
+</body>
+</html>

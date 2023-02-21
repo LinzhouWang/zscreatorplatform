@@ -8,13 +8,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using CSRedis;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
+using NLog.Extensions.Logging;
 using ZSCreatorPlatform.Web.Admin.Extensions;
 
 namespace ZSCreatorPlatform.Web.Admin
@@ -35,29 +41,36 @@ namespace ZSCreatorPlatform.Web.Admin
         {
             //接口文档swagger
             #region swageger
-
-            services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("zscreatorplatform",new OpenApiInfo()
-                {
-                    Title = _configuration["Swagger:Title"],
-                    Description = _configuration["Swagger:Description"],
-                    Version = "v"+_configuration["Swagger:Version"],
-                    Contact = new OpenApiContact()
-                    {
-                        Name = _configuration["Swagger:Name"],
-                        Email = _configuration["Swagger:Email"],
-                        Url = new Uri(_configuration["Swagger:Url"])
-                    },
-                    License = new OpenApiLicense()
-                    {
-                        Name = _configuration["Swagger:Name"],
-                        Url = new Uri(_configuration["Swagger:Url"])
-                    }
-                });                
-            });
+            
+            // services.AddSwaggerGen(options =>
+            // {
+            //     options.SwaggerDoc(_configuration["Swagger:DocName"],new OpenApiInfo()
+            //     {
+            //         Title = _configuration["Swagger:Title"],
+            //         Description = _configuration["Swagger:Description"],
+            //         Version = "v"+_configuration["Swagger:Version"],
+            //         Contact = new OpenApiContact()
+            //         {
+            //             Name = _configuration["Swagger:Name"],
+            //             Email = _configuration["Swagger:Email"],
+            //             Url = new Uri(_configuration["Swagger:Url"])
+            //         },
+            //         License = new OpenApiLicense()
+            //         {
+            //             Name = _configuration["Swagger:Name"],
+            //             Url = new Uri(_configuration["Swagger:Url"])
+            //         }
+            //     });                
+            // });
 
             #endregion
+            
+            //日志
+            services.AddLogging(builder =>
+            {
+                builder.ClearProviders();
+                builder.AddNLog();
+            });
             
             services.AddControllersWithViews();
 
@@ -132,10 +145,11 @@ namespace ZSCreatorPlatform.Web.Admin
 
             #endregion
 
-            //跨域
+            //跨域--mvc不考虑
 
             //异常
-
+            
+            
             //定时任务
 
             //数据库、多库
@@ -155,11 +169,40 @@ namespace ZSCreatorPlatform.Web.Admin
             {
                 app.UseDeveloperExceptionPage();
 
-                app.UseSwagger();
-                app.UseSwaggerUI(options =>
-                {
-                    options.SwaggerEndpoint("","");
-                });
+                // app.UseSwagger();
+                // //swagger/index.html
+                // app.UseSwaggerUI(options =>
+                // {
+                //     options.SwaggerEndpoint("/swagger/v1/swagger.json","MyApiV1");
+                // });
+            }
+            else
+            {
+                #region 返回json
+
+                // app.UseExceptionHandler(builder =>
+                // {
+                //     builder.Run(async context =>
+                //     {
+                //         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                //         context.Response.ContentType = "application/json";//"text/html";
+                //         var exception = context.Features.Get<IExceptionHandlerFeature>();
+                //         if (exception!=null)
+                //         {
+                //             //应该进行日志记录
+                //             var err = new { code = (int)HttpStatusCode.InternalServerError, msg = "系统内部错误，请稍后重试！" };
+                //             await context.Response.WriteAsync(JsonConvert.SerializeObject(err)).ConfigureAwait(false);
+                //         }
+                //     });
+                // });
+
+                #endregion
+
+                #region 返回错误页面
+
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/NotFound/{0}");
+                #endregion
             }
 
             var defaultFilesOptions = new DefaultFilesOptions();
