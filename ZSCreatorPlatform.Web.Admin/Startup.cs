@@ -14,6 +14,7 @@ using System.Net;
 using System.Threading.Tasks;
 using CSRedis;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using NLog.Extensions.Logging;
+using ZSCreatorPlatform.Web.Admin.Domain;
 using ZSCreatorPlatform.Web.Admin.Extensions;
 
 namespace ZSCreatorPlatform.Web.Admin
@@ -65,12 +67,12 @@ namespace ZSCreatorPlatform.Web.Admin
 
             #endregion
             
-            //日志
-            services.AddLogging(builder =>
-            {
-                builder.ClearProviders();
-                builder.AddNLog();
-            });
+            //日志，放到main中了
+            // services.AddLogging(builder =>
+            // {
+            //     builder.ClearProviders();
+            //     builder.AddNLog();
+            // });
             
             services.AddControllersWithViews();
 
@@ -147,12 +149,16 @@ namespace ZSCreatorPlatform.Web.Admin
 
             //跨域--mvc不考虑
 
-            //异常
+            //异常----
             
             
             //定时任务
 
             //数据库、多库
+            services.AddDbContextPool<ZSCreatroDbContext>(provider =>
+            {
+                provider.UseMySql(_configuration.GetConnectionString("ZSCreatorDefault"));
+            },128);
 
             //cap
 
