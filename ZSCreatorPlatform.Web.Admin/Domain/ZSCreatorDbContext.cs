@@ -11,7 +11,7 @@ namespace ZSCreatorPlatform.Web.Admin.Domain
     /// <summary>
     /// ZSCreatorDbContext
     /// </summary>
-    public class ZSCreatroDbContext:DbContext,IUnitOfWork
+    public class ZSCreatorDbContext:DbContext,IUnitOfWork
     {
 
         #region Contors
@@ -20,7 +20,7 @@ namespace ZSCreatorPlatform.Web.Admin.Domain
         /// Contors
         /// </summary>
         /// <param name="dbOptions"></param>
-        public ZSCreatroDbContext(DbContextOptions<ZSCreatroDbContext> dbOptions):base(dbOptions)
+        public ZSCreatorDbContext(DbContextOptions<ZSCreatorDbContext> dbOptions):base(dbOptions)
         {
             
         }
@@ -28,6 +28,8 @@ namespace ZSCreatorPlatform.Web.Admin.Domain
         #endregion
 
         public DbSet<User> User { get; set; }
+
+        public DbSet<Store> Store { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -65,5 +67,19 @@ namespace ZSCreatorPlatform.Web.Admin.Domain
             return res;
         }
         
+        //SaveChanges、DbContextTransaction、
+        //同一个数据库上下文的事务
+
+        // public void CommitTransaction()
+        // {
+        //     
+        //     using (var transaction=base.Database.BeginTransaction())
+        //     {
+        //         
+        //         transaction.Commit();
+        //     }
+        //     
+        // }
+
     }
 }

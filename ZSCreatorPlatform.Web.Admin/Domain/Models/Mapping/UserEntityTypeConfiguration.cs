@@ -7,7 +7,7 @@ namespace ZSCreatorPlatform.Web.Admin.Domain.Models.Mapping
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("T_User");
+            builder.ToTable("T_User").HasComment("用户表");
             builder.HasKey(x=>x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd().HasComment("主键Id");
             builder.Property(x => x.Name).HasMaxLength(50).HasComment("用户名称");
@@ -15,6 +15,7 @@ namespace ZSCreatorPlatform.Web.Admin.Domain.Models.Mapping
             builder.Property(x => x.Password).HasMaxLength(100).HasComment("用户密码");
             builder.Property(x => x.CreateTime).HasComment("用户创建时间");
             builder.Property(x => x.UpdateTime).HasComment("用户最后修改时间");
+            builder.Property(x => x.StoreId).HasColumnName("StoreId").HasComment("所属分店id");
         }
     }
 }

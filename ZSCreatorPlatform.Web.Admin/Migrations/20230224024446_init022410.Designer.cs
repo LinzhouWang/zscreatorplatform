@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZSCreatorPlatform.Web.Admin.Domain;
 
 namespace ZSCreatorPlatform.Web.Admin.Migrations
 {
     [DbContext(typeof(ZSCreatroDbContext))]
-    partial class ZSCreatroDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230224024446_init022410")]
+    partial class init022410
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

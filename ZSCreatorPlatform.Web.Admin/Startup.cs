@@ -149,9 +149,8 @@ namespace ZSCreatorPlatform.Web.Admin
 
             //跨域--mvc不考虑
 
-            //异常----
-            
-            
+            //异常----已有全局异常过滤器
+
             //定时任务
 
             //数据库、多库
@@ -160,11 +159,20 @@ namespace ZSCreatorPlatform.Web.Admin
                 provider.UseMySql(_configuration.GetConnectionString("ZSCreatorDefault"));
             },128);
 
+            //进程内，进程间事务一致性 SaveChanges(ChangeTracking)、DatabaseTrasaction、TrasactionScope
+            
             //cap
+            services.AddCap(options =>
+            {
+                //Database
+                options.UseEntityFramework<ZSCreatorDbContext>();
+                //MessageQueue
+                options.UseRabbitMQ("");
+
+                options.UseDashboard();
+            });
 
             //消息队列
-
-            //进程内，进程间事务一致性
 
         }
 

@@ -25,11 +25,13 @@ namespace ZSCreatorPlatform.Web.Admin.Domain.Models
         /// <param name="name"></param>
         /// <param name="password"></param>
         /// <param name="address"></param>
-        public User(string name,string password,string address):this()
+        /// <param name="storeId"></param>
+        public User(string name,string password,string address,int storeId):this()
         {
             this.Name = name;
             this.Password = password;
             this.Address = address;
+            this.StoreId = storeId;
         }
 
         #endregion
@@ -65,6 +67,16 @@ namespace ZSCreatorPlatform.Web.Admin.Domain.Models
         /// 最后更新时间
         /// </summary>
         public DateTime UpdateTime { get; private set; }
+
+        /// <summary>
+        /// 所属分店id
+        /// </summary>
+        public int StoreId { get; set; }
+
+        /// <summary>
+        /// 分店信息
+        /// </summary>
+        public Store Store { get; set; }
 
         #endregion
 

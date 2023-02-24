@@ -51,6 +51,18 @@
               "target": "Package",
               "version": "[3.8.670, )"
             },
+            "DotNetCore.CAP.Dashboard": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "DotNetCore.CAP.MySql": {
+              "target": "Package",
+              "version": "[3.0.4, )"
+            },
+            "DotNetCore.CAP.RabbitMQ": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
